@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, Users, Clock, Scale, Zap, HeartHandshake, Award, Target, BriefcaseBusiness, Building, Shield, Home, Heart, ArrowRight, Monitor, GraduationCap, Globe, Rocket, CodeXml, BookOpen, FileText } from 'lucide-react';
+import { Calendar, Users, Clock, Scale, Zap, HeartHandshake, Award, Target, BriefcaseBusiness, Building, Shield, Home, Heart, ArrowRight, Monitor, GraduationCap, Globe, Rocket, CodeXml, BookOpen, FileText, PencilLine } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Main = () => {
@@ -515,8 +515,179 @@ const Main = () => {
           </div>
         </div>
       </section>
+
+      {/* Blog Section */}
+      <section className="bg-gray-50 py-12 lg:py-16">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-8">
+            <div className="flex-1">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
+                <BookOpen className="w-4 h-4 text-blue-600 mr-2" />
+                <span className="text-blue-600 text-sm font-medium">
+                  Blog tham khảo
+                </span>
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Blog cập nhật gần đây nhất
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl">
+                Cập nhật những blog thông tin mới nhất về pháp luật, nghiên cứu tình huống và các cập nhật quan trọng về pháp lý nhà nước. Ngoài ra, Blog cũng cập nhật các bài viết liên quan đến các dịch vụ mà văn phòng đương nhiệm.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <Link 
+                href="/blog"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                Đến trang Blog
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Blog Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Blog Card 1 */}
+            <Card className="group hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0 h-full flex flex-col">
+              <div className="aspect-[3/2] bg-gray-200 relative overflow-hidden">
+                <Image 
+                  src="/no_image.jpg" 
+                  alt="Thành lập doanh nghiệp" 
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader className="p-6 pb-4">
+                <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-sm font-medium text-blue-600 mb-4 w-fit">
+                  <Scale className="w-3 h-3 mr-1" />
+                  Luật doanh nghiệp
+                </div>
+                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  Thành lập doanh nghiệp: Công ty TNHH hay Công ty cổ phần - Loại nào phù hợp với bạn?
+                </CardTitle>
+                <CardDescription className="text-gray-600 text-sm line-clamp-3">
+                  So sánh chi tiết các cơ cấu doanh nghiệp để giúp các doanh nhân lựa chọn giải pháp tốt nhất cho nhu cầu và mục tiêu cụ thể của mình.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="px-6 pt-0 flex-1">
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <PencilLine className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Tác giả: Luật sư Lê Song Tùng</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <Clock className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Thời gian đọc: 6 phút</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Ngày 5 tháng 6 năm 2025</span>
+                </div>
+              </CardContent>
+              <CardFooter className="p-6 pt-4 flex justify-center">
+                <Link 
+                  href="/blog/thanh-lap-doanh-nghiep"
+                  className="inline-flex items-center justify-center px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Xem bài viết
+                </Link>
+              </CardFooter>
+            </Card>
+
+            {/* Blog Card 2 */}
+            <Card className="group hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0 h-full flex flex-col">
+              <div className="aspect-[3/2] bg-gray-200 relative overflow-hidden">
+                <Image 
+                  src="/no_image.jpg" 
+                  alt="Thành lập doanh nghiệp" 
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader className="p-6 pb-4">
+                <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-sm font-medium text-blue-600 mb-4 w-fit">
+                  <Scale className="w-3 h-3 mr-1" />
+                  Luật doanh nghiệp
+                </div>
+                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  Thành lập doanh nghiệp: Công ty TNHH hay Công ty cổ phần - Loại nào phù hợp với bạn?
+                </CardTitle>
+                <CardDescription className="text-gray-600 text-sm line-clamp-3">
+                  So sánh chi tiết các cơ cấu doanh nghiệp để giúp các doanh nhân lựa chọn giải pháp tốt nhất cho nhu cầu và mục tiêu cụ thể của mình.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="px-6 pt-0 flex-1">
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <PencilLine className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Tác giả: Luật sư Lê Song Tùng</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <Clock className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Thời gian đọc: 6 phút</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Ngày 5 tháng 6 năm 2025</span>
+                </div>
+              </CardContent>
+              <CardFooter className="p-6 pt-4 flex justify-center">
+                <Link 
+                  href="/blog/thanh-lap-doanh-nghiep"
+                  className="inline-flex items-center justify-center px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Xem bài viết
+                </Link>
+              </CardFooter>
+            </Card>
+
+            {/* Blog Card 3 */}
+            <Card className="group hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0 h-full flex flex-col">
+              <div className="aspect-[3/2] bg-gray-200 relative overflow-hidden">
+                <Image 
+                  src="/no_image.jpg" 
+                  alt="Thành lập doanh nghiệp" 
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader className="p-6 pb-4">
+                <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-sm font-medium text-blue-600 mb-4 w-fit">
+                  <Scale className="w-3 h-3 mr-1" />
+                  Luật doanh nghiệp
+                </div>
+                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  Thành lập doanh nghiệp: Công ty TNHH hay Công ty cổ phần - Loại nào phù hợp với bạn?
+                </CardTitle>
+                <CardDescription className="text-gray-600 text-sm line-clamp-3">
+                  So sánh chi tiết các cơ cấu doanh nghiệp để giúp các doanh nhân lựa chọn giải pháp tốt nhất cho nhu cầu và mục tiêu cụ thể của mình.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="px-6 pt-0 flex-1">
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <PencilLine className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Tác giả: Luật sư Lê Song Tùng</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500 mb-3">
+                  <Clock className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Thời gian đọc: 6 phút</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="w-4 h-4 mr-2 text-blue-600" />
+                  <span>Ngày 5 tháng 6 năm 2025</span>
+                </div>
+              </CardContent>
+              <CardFooter className="p-6 pt-4 flex justify-center">
+                <Link 
+                  href="/blog/thanh-lap-doanh-nghiep"
+                  className="inline-flex items-center justify-center px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Xem bài viết
+                </Link>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      </section>
     </>
   );
-};
-
-export default Main;
+};export default Main;
