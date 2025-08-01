@@ -1,10 +1,48 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, Users, Clock, Scale, Zap, HeartHandshake, Award, Target, BriefcaseBusiness, Building, Shield, Home, Heart, ArrowRight, Monitor, GraduationCap, Globe, Rocket, CodeXml, BookOpen, FileText, PencilLine } from 'lucide-react';
+import { Calendar, Users, Clock, Scale, Zap, HeartHandshake, Award, Target, BriefcaseBusiness, Building, Shield, Home, Heart, ArrowRight, Monitor, GraduationCap, Globe, Rocket, CodeXml, BookOpen, FileText, PencilLine, Phone, Mail, MapPin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
+
+// Form schema
+const contactFormSchema = z.object({
+  name: z.string().min(2, {
+    message: "Tên phải có ít nhất 2 ký tự.",
+  }),
+  email: z.string().email({
+    message: "Vui lòng nhập địa chỉ email hợp lệ.",
+  }),
+  phone: z.string().min(10, {
+    message: "Số điện thoại phải có ít nhất 10 ký tự.",
+  }),
+  message: z.string().min(10, {
+    message: "Tin nhắn phải có ít nhất 10 ký tự.",
+  }),
+});
 
 const Main = () => {
+  // Form handling
+  const form = useForm<z.infer<typeof contactFormSchema>>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof contactFormSchema>) {
+    console.log(values);
+  }
+
   return (
     <>
       <section className="bg-white py-16 lg:py-24">
@@ -685,6 +723,177 @@ const Main = () => {
                 </Link>
               </CardFooter>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="bg-blue-50 py-12 lg:py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left Content */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-300 rounded-full">
+                <Phone className="w-4 h-4 text-blue-600 mr-2" />
+                <span className="text-blue-600 text-sm font-medium">
+                  Liên hệ hôm nay
+                </span>
+              </div>
+
+              {/* Main Heading */}
+              <div className="space-y-4">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                  Bạn đã sẵn sàng thảo luận
+                </h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 leading-tight">
+                  về vấn đề pháp lý của bạn ?
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Hãy liên hệ với chúng tôi ngay hôm nay để đặt lịch hẹn tư vấn. Văn phòng Luật sư Tùng Lâm sẵn sàng cung cấp hướng dẫn chuyên môn pháp lý và sự đại diện tích cực mà bạn xứng đáng được hưởng.
+                </p>
+              </div>
+
+              {/* Contact Info */}
+              <div className="space-y-6">
+                {/* Phone Contact */}
+                <div className="flex items-center">
+                  <div className="w-16 h-16 bg-blue-100 border border-blue-200 rounded-full flex items-center justify-center mr-5 flex-shrink-0">
+                    <Phone className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-base mb-1">Liên hệ chúng tôi</h3>
+                    <p className="text-sm text-gray-600 mb-1">Luật sư Lê Song Tùng - Trưởng văn phòng 0938571549</p>
+                    <p className="text-sm text-gray-600">Bà Lê Thị Liên - 0901373986</p>
+                  </div>
+                </div>
+
+                {/* Email Contact */}
+                <div className="flex items-center">
+                  <div className="w-16 h-16 bg-blue-100 border border-blue-200 rounded-full flex items-center justify-center mr-5 flex-shrink-0">
+                    <Mail className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-base mb-1">Email liên hệ</h3>
+                    <p className="text-sm text-gray-600 mb-1">ls.songtung@yahoo.com - Luật sư Lê Song Tùng</p>
+                    <p className="text-sm text-gray-600">Tuandungvuive@gmail.com- Cộng sự Lê Anh Tuấn Dũng</p>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-center">
+                  <div className="w-16 h-16 bg-blue-100 border border-blue-200 rounded-full flex items-center justify-center mr-5 flex-shrink-0">
+                    <MapPin className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 text-base mb-1">Địa chỉ văn phòng</h3>
+                    <p className="text-sm text-gray-600">399 Bình Lợi, phường Bình Hưng Hòa Loi Trung , Thành phố Hồ Chí Minh. (Văn phòng Luật sư Tùng Lâm)</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link 
+                  href="/lien-he"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-black text-white font-medium rounded-lg hover:bg-gray-800 transition-colors"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Đặt lịch hẹn
+                </Link>
+                <Link 
+                  href="/lien-he"
+                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-100 transition-colors"
+                >
+                  Liên hệ chúng tôi
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Form */}
+            <div className="bg-white rounded-lg border border-gray-200 p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Form liên hệ nhanh</h3>
+              
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  {/* Name Field */}
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Họ và tên</FormLabel>
+                        <FormControl>
+                          <Input placeholder="" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Email Field */}
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <Input placeholder="info@email.com" className="pl-12" {...field} />
+                          </div>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Phone Field */}
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Số điện thoại</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+                            <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                            <Input placeholder="0903874986" className="pl-12" {...field} />
+                          </div>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Message Field */}
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Mô tả ngắn gọn về vấn đề pháp lý của bạn</FormLabel>
+                        <FormControl>
+                          <textarea
+                            placeholder="Type your message..."
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none min-h-[100px]"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Submit Button */}
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Gửi tin nhắn
+                  </Button>
+                </form>
+              </Form>
+            </div>
           </div>
         </div>
       </section>
