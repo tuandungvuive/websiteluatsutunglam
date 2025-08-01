@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, PencilLine, Clock, Calendar } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { blogData } from '@/lib/utils/constants';
 
@@ -55,24 +55,24 @@ const BlogSection = () => {
                   <post.category.icon className="w-3 h-3 mr-1" />
                   {post.category.text}
                 </div>
-                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                <CardTitle className="text-xl font-bold text-gray-900 mb-3 line-clamp-3">
                   {post.title}
                 </CardTitle>
                 <CardDescription className="text-gray-600 text-sm line-clamp-3">
                   {post.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="px-6 pt-0 flex-1">
+              <CardContent className="px-6 pt-0 flex-">
                 <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <post.category.icon className="w-4 h-4 mr-2 text-blue-600" />
+                  <PencilLine className="w-4 h-4 mr-2 text-blue-600" />
                   <span>Tác giả: {post.author}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <post.category.icon className="w-4 h-4 mr-2 text-blue-600" />
+                  <Clock className="w-4 h-4 mr-2 text-blue-600" />
                   <span>Thời gian đọc: {post.readTime}</span>
                 </div>
                 <div className="flex items-center text-sm text-gray-500">
-                  <post.category.icon className="w-4 h-4 mr-2 text-blue-600" />
+                  <Calendar className="w-4 h-4 mr-2 text-blue-600" />
                   <span>{post.date}</span>
                 </div>
               </CardContent>

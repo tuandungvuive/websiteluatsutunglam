@@ -247,14 +247,14 @@ export const blogData = {
       image: "/no_image.jpg",
       category: {
         icon: Scale,
-        text: "Luật hôn nhân"
+        text: "Luật doanh nghiệp"
       },
-      title: "Thủ tục ly hôn đơn phương: Điều kiện và quy trình chi tiết",
-      description: "Hướng dẫn chi tiết về thủ tục ly hôn đơn phương, các điều kiện cần thiết và quy trình thực hiện để bảo vệ quyền lợi của bạn.",
+      title: "Thành lập doanh nghiệp: Công ty TNHH hay Công ty cổ phần - Loại nào phù hợp với bạn?",
+      description: "So sánh chi tiết các cơ cấu doanh nghiệp để giúp các doanh nhân lựa chọn giải pháp tốt nhất cho nhu cầu và mục tiêu cụ thể của mình.",
       author: "Luật sư Lê Song Tùng",
-      readTime: "5 phút",
-      date: "Ngày 7 tháng 6 năm 2025",
-      href: "/blog/thu-tuc-ly-hon-don-phuong"
+      readTime: "6 phút",
+      date: "Ngày 5 tháng 6 năm 2025",
+      href: "/blog/thanh-lap-doanh-nghiep"
     },
     {
       id: 2,
@@ -274,15 +274,15 @@ export const blogData = {
       id: 3,
       image: "/no_image.jpg",
       category: {
-        icon: PencilLine,
-        text: "Luật lao động"
+        icon: Scale,
+        text: "Luật doanh nghiệp"
       },
-      title: "Giải quyết tranh chấp lao động: Quyền lợi người lao động cần biết",
-      description: "Hướng dẫn chi tiết về quy trình giải quyết tranh chấp lao động và các quyền lợi mà người lao động cần nắm rõ để bảo vệ bản thân.",
+      title: "Thành lập doanh nghiệp: Công ty TNHH hay Công ty cổ phần - Loại nào phù hợp với bạn?",
+      description: "So sánh chi tiết các cơ cấu doanh nghiệp để giúp các doanh nhân lựa chọn giải pháp tốt nhất cho nhu cầu và mục tiêu cụ thể của mình.",
       author: "Luật sư Lê Song Tùng",
-      readTime: "7 phút",
-      date: "Ngày 3 tháng 6 năm 2025",
-      href: "/blog/tranh-chap-lao-dong"
+      readTime: "6 phút",
+      date: "Ngày 5 tháng 6 năm 2025",
+      href: "/blog/thanh-lap-doanh-nghiep"
     }
   ]
 };
