@@ -109,26 +109,3 @@ export const contactInfo = {
   description: "Cung cấp các dịch vụ pháp lý đặc biệt với sự chính trực, tận tâm trong hơn 10 năm qua"
 };
 
-// Social media links
-export const socialLinks = [
-  {
-    name: "Facebook",
-    href: "#",
-    icon: "facebook"
-  },
-  {
-    name: "Messenger",
-    href: "#",
-    icon: "messenger"
-  },
-  {
-    name: "Zalo",
-    href: "#",
-    icon: "zalo"
-  },
-  {
-    name: "YouTube",
-    href: "#",
-    icon: "youtube"
-  }
-];

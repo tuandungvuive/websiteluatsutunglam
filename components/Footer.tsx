@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { quickLinks, legalServices, contactInfo, socialLinks } from '@/lib/utils/navigation';
+import { quickLinks, legalServices, contactInfo } from '@/lib/utils/navigation';
 
 const Footer = () => {
   return (
