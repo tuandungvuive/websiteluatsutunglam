@@ -1,0 +1,244 @@
+"use client";
+
+import Link from "next/link";
+import { Card ,CardContent} from "@/components/ui/card";
+import { familyLawData, activityData } from "@/lib/utils/activity";
+
+const FamilyLawPage = () => {
+  const { cta } = activityData;
+  const { backLink, hero, mainContent, professionalAreas, sidebar, services } = familyLawData;
+  
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Header with Back Button */}
+      <section className="bg-white py-8">
+        <div className="container mx-auto px-4">
+          <Link 
+            href={backLink.href}
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors mb-6"
+          >
+            <backLink.icon className="w-5 h-5 mr-2" />
+            {backLink.text}
+          </Link>
+        </div>
+      </section>
+
+      {/* Hero Section */}
+      <section className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center mb-6">
+            <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+              <hero.icon className="w-8 h-8 text-blue-600" />
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-2">{hero.title}</h1>
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                {hero.badge}
+              </span>
+            </div>
+          </div>
+
+          <p className="text-lg text-gray-600 max-w-4xl leading-relaxed mb-8">
+            {hero.description}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            {hero.buttons.map((button, index) => (
+              <Link
+                key={index}
+                href={button.href}
+                className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
+                  button.variant === 'primary' 
+                    ? 'bg-black text-white hover:bg-gray-800' 
+                    : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
+                }`}
+              >
+                {button.icon && <button.icon className="w-5 h-5 mr-2" />}
+                {button.text}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            {/* Main Content Column */}
+            <div className="lg:col-span-3">
+              <div className="bg-white p-8 rounded-lg shadow-sm mb-6">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <mainContent.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900">{mainContent.title}</h2>
+                </div>
+                
+                {mainContent.description.map((paragraph, index) => (
+                  <p key={index} className="text-gray-700 mb-6 leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-sm">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <professionalAreas.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900">{professionalAreas.title}</h2>
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {professionalAreas.areas.map((area, index) => (
+                    <div key={index} className="flex items-center">
+                      <area.icon className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700">{area.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Sidebar Column */}
+            <div className="lg:col-span-2 space-y-6">
+              {/* Contact Card */}
+              <Card className="mb-8">
+                <CardContent className="p-6">
+                  <div className="text-center mb-4">
+                    <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <sidebar.contact.icon className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {sidebar.contact.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-4">
+                      {sidebar.contact.description}
+                    </p>
+                    {sidebar.contact.buttons.map((button, index) => (
+                      <Link
+                        key={index}
+                        href={button.href}
+                        className={`block w-full text-center py-3 rounded-lg font-medium transition-colors mb-3 ${
+                          button.variant === 'primary' 
+                            ? 'bg-black text-white hover:bg-gray-800' 
+                            : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
+                        }`}
+                      >
+                        {button.icon && <button.icon className="w-5 h-5 mr-2 inline-block" />}
+                        {button.text}
+                      </Link>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Specialties Card */}
+              <Card>
+                <div className="p-6">
+                  <div className="flex items-center mb-4">
+                    <sidebar.specialties.icon className="w-5 h-5 text-blue-600 mr-2" />
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {sidebar.specialties.title}
+                    </h3>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {sidebar.specialties.items.map((item, index) => (
+                      <div key={index}>
+                        <h4 className="font-medium text-gray-900 mb-1">{item.title}</h4>
+                        <p className="text-gray-600 text-sm">{item.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+
+              {/* Related Areas Card */}
+              <Card>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    {sidebar.relatedAreas.title}
+                  </h3>
+                  
+                  <div className="space-y-2">
+                    {sidebar.relatedAreas.links.map((link, index) => (
+                      <Link
+                        key={index}
+                        href={link.href}
+                        className="block text-blue-600 hover:text-blue-800 transition-colors"
+                      >
+                        {link.text}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            {services.title}
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.items.map((service, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start mb-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <service.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                      <p className="text-gray-600">{service.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-white py-12 lg:py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Main Heading */}
+            <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
+              {cta.heading.title}
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+              {cta.description}
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {cta.buttons.map((button, index) => (
+                <Link 
+                  key={index}
+                  href={button.href}
+                  className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
+                    button.variant === 'primary' 
+                      ? 'bg-black text-white hover:bg-gray-800' 
+                      : 'bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-600'
+                  }`}
+                >
+                  {button.icon && <button.icon className="w-5 h-5 mr-2" />}
+                  {button.text}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FamilyLawPage;
