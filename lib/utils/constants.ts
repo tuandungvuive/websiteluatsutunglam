@@ -21,7 +21,6 @@ import {
   MapPin,
   Calendar,
   Clock,
-  PencilLine
 } from 'lucide-react';
 
 // Hero Section Data
@@ -36,13 +35,13 @@ export const heroData = {
   },
   buttons: [
     {
-      href: "/lien-he",
+      href: "/contact",
       text: "ĐẶT LỊCH HẸN",
       icon: Calendar,
       variant: "primary" as const
     },
     {
-      href: "/dich-vu",
+      href: "/services",
       text: "Tham khảo dịch vụ",
       variant: "secondary" as const
     }
@@ -127,47 +126,47 @@ export const servicesData = {
       icon: BriefcaseBusiness,
       title: "Luật Doanh nghiệp",
       description: "Thành lập doanh nghiệp.Mua bán vốn góp chuyển nhượng cổ phần,tham gia các tổ chức tự doanh và tài chính khác.",
-      href: "/dich-vu/luat-doanh-nghiep",
+      href: "/activity/corporate",
       buttonText: "Tham khảo về Luật Doanh nghiệp"
     },
     {
       icon: Users,
       title: "Luật Dân sự",
       description: "Giải quyết các vụ việc tranh chấp hợp đồng dân sự.Tranh chấp tư liệu thương tố và các hành vi vi dân tích.",
-      href: "/dich-vu/luat-dan-su",
+      href: "/activity/civil",
       buttonText: "Tham khảo về Luật Dân sự"
     },
     {
       icon: Heart,
       title: "Luật Hôn nhân và Gia đình",
       description: "Tư vấn, hướng dẫn xin thành thủ tục giải ly hôn, chia tài sản chung giữa vợ và chồng,quyền nuôi con và các vấn đề khác.",
-      href: "/dich-vu/luat-hon-nhan-gia-dinh",
+      href: "/activity/family",
       buttonText: "Tìm hiểu về Luật Hôn nhân Gia đình"
     },
     {
       icon: Home,
       title: "Luật Đất đai",
       description: "Tư vấn các thủ tục pháp lý liên quan đến việc sử dụng đất đai.Tách thửa họp đông và cấp bàng sở hữu nhà ở.Điều kiện của việc chuyển nhượng quyền sử dụng đất và tài sản khác.",
-      href: "/dich-vu/luat-dat-dai",
+      href: "/activity/real-estate",
       buttonText: "Tham khảo về Luật Đất đai"
     },
     {
       icon: Shield,
       title: "Luật Hình sự",
-      description: "Bào chữa tịch cực cho bị cáo và bị can trong lĩnh vực tội phạm diện về an toàn tổng lê và dân chủ.",
-      href: "/dich-vu/luat-hinh-su",
+      description: "Bào chữa tích cực cho bị cáo và bị can trong lĩnh vực tội phạm diện về an toàn tổng lê và dân chủ.",
+      href: "/activity/criminal",
       buttonText: "Tham khảo về Luật Hình sự"
     },
     {
       icon: Building,
       title: "Luật Lao động",
       description: "Tư vấn và hỗ trợ giải quyết các tranh chấp lao động.Thành lập hợp đồng và phàn xử về chính sách lao động.",
-      href: "/dich-vu/luat-lao-dong",
+      href: "/activity/labor",
       buttonText: "Tham khảo về Luật Lao động"
     }
   ],
   cta: {
-    href: "/dich-vu",
+    href: "/activity",
     text: "Tham khảo lĩnh vực hành nghề"
   }
 };
@@ -196,7 +195,7 @@ export const valuePropositionData = {
   ],
   buttons: [
     {
-      href: "/dich-vu/website",
+      href: "/services/website",
       text: "Đến dịch vụ Website",
       icon: Globe,
       variant: "primary" as const
@@ -325,13 +324,13 @@ export const contactData = {
   ],
   buttons: [
     {
-      href: "/lien-he",
+      href: "/contact",
       text: "Đặt lịch hẹn",
       icon: Calendar,
       variant: "primary" as const
     },
     {
-      href: "/lien-he",
+      href: "/contact",
       text: "Liên hệ chúng tôi",
       variant: "secondary" as const
     }
