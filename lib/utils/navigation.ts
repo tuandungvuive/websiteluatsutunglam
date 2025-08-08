@@ -13,11 +13,11 @@ export const mainNavigation: NavigationItem[] = [
   },
   {
     label: "HOẠT ĐỘNG HÀNH NGHỀ",
-    href: "/hoat-dong"
+    href: "/activity"
   },
   {
     label: "LUẬT SƯ CỘNG SỰ",
-    href: "/luat-su"
+    href: "/lawyers"
   },
   {
     label: "ST.Blog",
@@ -25,23 +25,23 @@ export const mainNavigation: NavigationItem[] = [
   },
   {
     label: "LIÊN HỆ",
-    href: "/lien-he"
+    href: "/contact"
   },
   {
     label: "DỊCH VỤ",
-    href: "/dich-vu",
+    href: "/services",
     children: [
       {
         label: "Dịch vụ 1",
-        href: "/dich-vu-1"
+        href: "/services-1"
       },
       {
         label: "Dịch vụ 2",
-        href: "/dich-vu-2"
+        href: "/services-2"
       },
       {
         label: "Dịch vụ 3",
-        href: "/dich-vu-3"
+        href: "/services-3"
       }
     ]
   }
@@ -55,11 +55,11 @@ export const quickLinks: NavigationItem[] = [
   },
   {
     label: "Hoạt động hành nghề",
-    href: "/hoat-dong"
+    href: "/activity"
   },
   {
     label: "Luật sư - Cộng sự",
-    href: "/luat-su"
+    href: "/lawyers"
   },
   {
     label: "ST.Blog",
@@ -67,11 +67,11 @@ export const quickLinks: NavigationItem[] = [
   },
   {
     label: "Dịch vụ",
-    href: "/dich-vu"
+    href: "/services"
   },
   {
     label: "Liên hệ",
-    href: "/lien-he"
+    href: "/contact"
   }
 ];
 
@@ -79,23 +79,23 @@ export const quickLinks: NavigationItem[] = [
 export const legalServices: NavigationItem[] = [
   {
     label: "Luật Doanh nghiệp",
-    href: "/dich-vu/doanh-nghiep"
+    href: "/activity/corporate"
   },
   {
     label: "Luật dân sự",
-    href: "/dich-vu/dan-su"
+    href: "/activity/civil"
   },
   {
     label: "Luật Hôn nhân & gia đình",
-    href: "/dich-vu/hon-nhan-gia-dinh"
+    href: "/activity/family"
   },
   {
     label: "Luật đất đai",
-    href: "/dich-vu/dat-dai"
+    href: "/activity/real-estate"
   },
   {
     label: "Luật Hình sự",
-    href: "/dich-vu/hinh-su"
+    href: "/activity/criminal"
   }
 ];
 
