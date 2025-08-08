@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { mainNavigation } from '@/lib/utils/navigation';
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <>
       {/* Header section with logo and title */}
@@ -101,5 +101,3 @@ const Navbar = () => {
     </>
   );
 };
-
-export default Navbar;
