@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { valuePropositionData } from '@/lib/utils/constants';
 
-const ValuePropositionSection = () => {
+export default function ValuePropositionSection() {
   const { badge, heading, features, buttons, stats } = valuePropositionData;
 
   return (
@@ -102,4 +102,3 @@ const ValuePropositionSection = () => {
   );
 };
 
-export default ValuePropositionSection;

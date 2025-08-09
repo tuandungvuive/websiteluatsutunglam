@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { activityData, corporateLawData } from '@/lib/utils/activity';
 
-const CorporateLawPage = () => {
+export default function CorporateLawPage() {
   const { cta } = activityData;
   const { backLink, hero, mainContent, professionalAreas, sidebar, services } = corporateLawData;
   
@@ -234,5 +234,3 @@ const CorporateLawPage = () => {
     </div>
   );
 };
-
-export default CorporateLawPage;

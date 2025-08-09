@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { activityData } from '@/lib/utils/activity';
 
-const ActivityPage = () => {
+export default function ActivityPage() {
   const { hero, services, whyChooseUs, cta } = activityData;
 
   return (
@@ -182,4 +182,4 @@ const ActivityPage = () => {
   );
 };
 
-export default ActivityPage;
+

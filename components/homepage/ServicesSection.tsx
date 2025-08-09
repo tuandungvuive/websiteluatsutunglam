@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { servicesData } from '@/lib/utils/constants';
 
-const ServicesSection = () => {
+export default function ServicesSection() {
   const { badge, heading, services, cta } = servicesData;
 
   return (
@@ -73,5 +73,3 @@ const ServicesSection = () => {
     </section>
   );
 };
-
-export default ServicesSection;

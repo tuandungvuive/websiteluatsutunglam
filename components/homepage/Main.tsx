@@ -8,7 +8,7 @@ import ValuePropositionSection from './ValuePropositionSection';
 import BlogSection from './BlogSection';
 import ContactFormSection from './FormSection';
 
-const Main = () => {
+export default function Main() {
   return (
     <>
       <HeroSection />
@@ -20,5 +20,3 @@ const Main = () => {
     </>
   );
 };
-
-export default Main;

@@ -14,7 +14,7 @@ import { contactData } from '@/lib/utils/constants';
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
-const ContactFormSection = () => {
+export default function ContactFormSection() {
   const { badge, heading, contactInfo, form: formData } = contactData;
 
   const form = useForm<ContactFormData>({
@@ -213,5 +213,3 @@ const ContactFormSection = () => {
     </section>
   );
 };
-
-export default ContactFormSection;
