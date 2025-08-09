@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { coreValuesData } from '@/lib/utils/constants';
 
-const CoreValuesSection = () => {
+export default function CoreValuesSection() {
   const { badge, heading, cards } = coreValuesData;
 
   return (
@@ -61,5 +61,3 @@ const CoreValuesSection = () => {
     </section>
   );
 };
-
-export default CoreValuesSection;

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Card ,CardContent} from "@/components/ui/card";
 import { familyLawData, activityData } from "@/lib/utils/activity";
 
-const FamilyLawPage = () => {
+export default function FamilyLawPage() {
   const { cta } = activityData;
   const { backLink, hero, mainContent, professionalAreas, sidebar, services } = familyLawData;
   
@@ -241,4 +241,3 @@ const FamilyLawPage = () => {
   );
 };
 
-export default FamilyLawPage;

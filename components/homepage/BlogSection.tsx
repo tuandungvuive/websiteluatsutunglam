@@ -5,7 +5,7 @@ import { ArrowRight, PencilLine, Clock, Calendar } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { blogData } from '@/lib/utils/constants';
 
-const BlogSection = () => {
+export default function BlogSection() {
   const { badge, heading, cta, posts } = blogData;
 
   return (
@@ -92,4 +92,3 @@ const BlogSection = () => {
   );
 };
 
-export default BlogSection;

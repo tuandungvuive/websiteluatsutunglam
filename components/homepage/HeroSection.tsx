@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { heroData } from '@/lib/utils/constants';
 
-const HeroSection = () => {
+export default function HeroSection() {
   const { badge, heading, buttons, features } = heroData;
 
   return (
@@ -84,4 +84,3 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
