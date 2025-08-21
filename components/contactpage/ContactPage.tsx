@@ -98,7 +98,7 @@ export default function ContactPage() {
                   0938571549 - Luật sư Lê Song Tùng
                 </Button>
               </Link>
-              <Link href="#appointment">
+              <Link href="/contact">
                 <Button
                   variant="outline"
                   className="border-blue-500 text-blue-600 hover:bg-blue-50"
