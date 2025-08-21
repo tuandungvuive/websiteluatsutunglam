@@ -1,13 +1,40 @@
 import { 
-  Book, 
-  Briefcase, 
   Building, 
   FileText, 
   Home, 
   Scale, 
-  Users 
+  Users,
+  LucideIcon
 } from "lucide-react";
 
+// Blog related types
+export interface BlogCategory {
+  id: string;
+  label: string;
+  icon?: LucideIcon;
+}
+
+export interface BlogPost {
+  id: string;
+  category: string;
+  categoryLabel: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
+  image: string;
+}
+
+// Button related types
+export interface ButtonData {
+  text: string;
+  href: string;
+  variant: "primary" | "secondary";
+  icon?: LucideIcon;
+}
+
+// Blog data structure
 export const blogData = {
   hero: {
     title: "ST.Blog",

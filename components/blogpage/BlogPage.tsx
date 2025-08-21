@@ -15,20 +15,20 @@ import {
   Calendar, 
   Briefcase,
   BookOpen,
-  ListFilter,
   FileText,
   Search,
   Tag,
-  Filter,
+  Filter
 } from 'lucide-react';
-import { blogData } from '@/lib/utils/blog';
+import { blogData, BlogCategory, BlogPost} from '@/lib/utils/blog';
 import { activityData } from '@/lib/utils/activity';
+
 
 export default function BlogPage() {
   const { categories, featuredPost, recentPosts } = blogData;
 
   const [activeCategory, setActiveCategory] = useState('all');
-  const [filteredPosts, setFilteredPosts] = useState(recentPosts);
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>(recentPosts);
   const { hero } = blogData;
   const { cta } = activityData;
   
@@ -159,7 +159,7 @@ export default function BlogPage() {
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mt-6">
-            {categories.map((category: { id: string; label: string; icon?: any }) => (
+            {categories.map((category: BlogCategory) => (
               <Card
                 key={category.id}
                 className={`cursor-pointer transition-all duration-300 overflow-hidden h-full ${
@@ -263,7 +263,7 @@ export default function BlogPage() {
           {/* Blog Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.length > 0 ? (
-              filteredPosts.map((post: any, index: number) => (
+              filteredPosts.map((post: BlogPost, index: number) => (
                 <Card key={index} className="group hover:shadow-lg transition-shadow duration-300 overflow-hidden p-0 h-full flex flex-col">
                   <div className="aspect-[3/2] bg-gray-200 relative overflow-hidden">
                     <Image 
