@@ -201,7 +201,7 @@ export const valuePropositionData = {
       variant: "primary" as const
     },
     {
-      href: "/khoa-hoc",
+      href: "/course",
       text: "Tham khảo khóa học",
       icon: BookOpen,
       variant: "secondary" as const
