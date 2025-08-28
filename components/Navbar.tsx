@@ -28,10 +28,10 @@ export const Navbar = () => {
           </div>
           <div className="text-center">
             <h1 className="text-2xl md:text-3xl font-bold text-gray-700 mb-2">
-              ĐOÀN LUẬT SỰ THÀNH PHỐ HỒ CHÍ MINH
+              ĐOÀN LUẬT SƯ THÀNH PHỐ HỒ CHÍ MINH
             </h1>
             <h2 className="text-xl md:text-2xl font-semibold text-gray-600">
-              VĂN PHÒNG LUẬT SỰ TÙNG LÂM
+              VĂN PHÒNG LUẬT SƯ TÙNG LÂM
             </h2>
           </div>
         </div>
