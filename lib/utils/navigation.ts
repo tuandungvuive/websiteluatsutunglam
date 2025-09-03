@@ -102,7 +102,7 @@ export const legalServices: NavigationItem[] = [
 // Contact information
 export const contactInfo = {
   companyName: "VĂN PHÒNG LUẬT SƯ TÙNG LÂM",
-  address: "399 Bình Lợi, Phường 13, Bình Thạnh, Hồ Chí Minh (Văn phòng Luật sư Tùng Lâm)",
+  address: "399 Bình Lợi, phường Bình Lợi Trung,Thành phố Hồ Chí Minh (Văn phòng Luật sư Tùng Lâm)",
   phone: "0938571549",
   lawyer: "Luật sư Lê Song Tùng -Trưởng văn phòng",
   assistant: "Bà Lê Thị Liên - 0901373986",
