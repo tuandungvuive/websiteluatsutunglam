@@ -318,7 +318,7 @@ export const contactData = {
       icon: MapPin,
       title: "Địa chỉ văn phòng",
       details: [
-        "399 Bình Lợi, phường Bình Hưng Hòa Loi Trung , Thành phố Hồ Chí Minh. (Văn phòng Luật sư Tùng Lâm)"
+        "399 Bình Lợi, Phường 13, Bình Thạnh, Hồ Chí Minh (Văn phòng Luật sư Tùng Lâm)"
       ]
     }
   ],
