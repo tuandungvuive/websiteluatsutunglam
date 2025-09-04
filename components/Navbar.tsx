@@ -1,14 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 import { mainNavigation } from '@/lib/utils/navigation';
 
 export const Navbar = () => {
@@ -56,44 +48,38 @@ export const Navbar = () => {
 
             {/* Center - Navigation Menu */}
             <div className="flex-1 flex justify-center">
-              <NavigationMenu viewport={false} className="z-20">
-                <NavigationMenuList className="flex items-center space-x-1">
-                  {mainNavigation.map((item, index) => (
-                    <NavigationMenuItem key={index}>
-                      {item.children ? (
-                        <>
-                          <NavigationMenuTrigger className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium">
-                            {item.label}
-                          </NavigationMenuTrigger>
-                          <NavigationMenuContent>
-                            <div className="p-4 w-64">
-                              {item.children.map((child, childIndex) => (
-                                <NavigationMenuLink key={childIndex} asChild>
-                                  <Link 
-                                    href={child.href} 
-                                    className="block px-4 py-2 hover:bg-gray-100 rounded text-gray-700 hover:text-blue-600 transition-colors"
-                                  >
-                                    {child.label}
-                                  </Link>
-                                </NavigationMenuLink>
-                              ))}
-                            </div>
-                          </NavigationMenuContent>
-                        </>
-                      ) : (
-                        <NavigationMenuLink asChild>
-                          <Link 
-                            href={item.href} 
-                            className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                          >
-                            {item.label}
-                          </Link>
-                        </NavigationMenuLink>
-                      )}
-                    </NavigationMenuItem>
-                  ))}
-                </NavigationMenuList>
-              </NavigationMenu>
+              <nav className="flex items-center space-x-4">
+                {mainNavigation.map((item, index) => 
+                  item.children ? (
+                    <div key={index} className="relative group">
+                      <span className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium cursor-pointer">
+                        {item.label}
+                      </span>
+                      <div className="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all z-20">
+                        <div className="p-4">
+                          {item.children.map((child, childIndex) => (
+                            <Link 
+                              key={childIndex}
+                              href={child.href} 
+                              className="block px-4 py-2 hover:bg-gray-100 rounded text-gray-700 hover:text-blue-600 transition-colors"
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Link 
+                      key={index} 
+                      href={item.href} 
+                      className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                )}
+              </nav>
             </div>
           </div>
         </div>
