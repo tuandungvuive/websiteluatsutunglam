@@ -56,7 +56,7 @@ export const Navbar = () => {
 
             {/* Center - Navigation Menu */}
             <div className="flex-1 flex justify-center">
-              <NavigationMenu viewport={false}>
+              <NavigationMenu viewport={false} className="z-20">
                 <NavigationMenuList className="flex items-center space-x-1">
                   {mainNavigation.map((item, index) => (
                     <NavigationMenuItem key={index}>
