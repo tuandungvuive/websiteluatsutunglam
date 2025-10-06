@@ -81,29 +81,29 @@ export default function ActivityPage() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.practiceAreas.map((service, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 h-full flex flex-col bg-background border-primary/10 hover:border-primary/30">
                 <CardHeader className="pb-4">
-                  <div className="w-12 h-12 bg-blue-50 border border-blue-200 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-16 h-16 bg-secondary border border-primary/20 rounded-lg flex items-center justify-center mb-4">
+                    <service.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900">
+                  <CardTitle className="text-xl font-bold text-foreground legal-heading">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-1 pt-0">
-                  <CardDescription className="text-gray-600 text-sm leading-relaxed">
+                  <CardDescription className="text-muted-foreground text-base mb-6 legal-text leading-relaxed">
                     {service.description}
                   </CardDescription>
                 </CardContent>
                 <CardFooter className="justify-center">
                   <Link 
                     href={service.href}
-                    className="inline-flex items-center justify-center px-5 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors text-sm"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 legal-button shadow-lg hover:shadow-xl"
                   >
                     {service.buttonText}
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </CardFooter>
               </Card>
