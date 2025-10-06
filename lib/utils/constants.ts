@@ -5,10 +5,7 @@ import {
   Award, 
   Target, 
   BriefcaseBusiness, 
-  Building, 
-  Shield, 
-  Home, 
-  Heart, 
+  Handshake, 
   Users,
   FileText,
   Rocket,
@@ -27,11 +24,11 @@ import {
 export const heroData = {
   badge: {
     icon: Scale,
-    text: "12+ năm kinh nghiệm hành nghề"
+    text: "12+ năm trong lĩnh vực hành nghề"
   },
   heading: {
-    title: "Đối tác pháp lý đáng tin cậy của bạn",
-    description: "Văn phòng luật sư Tùng Lâm cung cấp dịch vụ đại diện pháp lý cho khách hàng trên mọi lĩnh vực hành nghề"
+    title: "Luật sư Đồng hành, Giải pháp Vững chắc",
+    description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ đại diện pháp lý toàn diện trên mọi lĩnh vực. Chúng tôi cam kết hành nghề với chính trực tuyệt đối, bảo vệ tối đa quyền lợi khách hàng và mang lại kết quả vượt trội trong mọi vụ việc"
   },
   buttons: [
     {
@@ -41,7 +38,7 @@ export const heroData = {
       variant: "primary" as const
     },
     {
-      href: "/services",
+      href: "/activity",
       text: "Tham khảo dịch vụ",
       variant: "secondary" as const
     }
@@ -50,17 +47,17 @@ export const heroData = {
     {
       icon: BriefcaseBusiness,
       title: "Chuyên nghiệp",
-      description: "10+ năm kinh nghiệm hành nghề"
+      description: "12+ năm trong lĩnh vực hành nghề"
     },
     {
       icon: Users,
       title: "Tận tâm",
-      description: "Đặt khách hàng là trọng tâm"
+      description: "Tận tâm vì Lợi ích Khách hàng"
     },
     {
       icon: Clock,
-      title: "24/7",
-      description: "Hỗ trợ"
+      title: "Dịch vụ Pháp lý Liên tục (24/7)",
+      description: "Luật sư Luôn đồng hành, kể cả ngoài giờ hành chính"
     }
   ]
 };
@@ -80,7 +77,7 @@ export const coreValuesData = {
     {
       icon: Zap,
       title: "Hướng đến sự hiệu quả",
-      description: "Chúng tôi tập trung vào việc đạt được kết quả tốt nhất có thể cho khách hàng thông qua tư duy chiến lược và hoạt động văn sự đội với vụ việc.",
+      description: "Bằng cách kết hợp tư duy chiến lược với khả năng thực thi vụ việc hiệu quả, chúng tôi cam kết đạt được kết quả vượt trội cho khách hàng.",
       link: {
         href: "#",
         text: "Hiệu quả cao",
@@ -89,8 +86,8 @@ export const coreValuesData = {
     },
     {
       icon: HeartHandshake,
-      title: "Khách hàng làm trọng tâm",
-      description: "Mỗi vị khách đều mong muốn nhận được sự quan tâm riêng và các chiến lược pháp lý được hợp với hoàn cảnh riêng của họ.",
+      title: "Tận tâm vì Lợi ích Khách hàng",
+      description: "Mỗi khách hàng đều xứng đáng nhận được sự quan tâm cá nhân và chiến lược pháp lý được thiết kế riêng biệt cho hoàn cảnh độc nhất của họ.",
       link: {
         href: "#",
         text: "Hỗ trợ 24/7",
@@ -99,11 +96,11 @@ export const coreValuesData = {
     },
     {
       icon: Scale,
-      title: "Đạo đức nghề nghiệp",
+      title: "Chính trực nghề nghiệp",
       description: "Chúng tôi duy trì các tiêu chuẩn đạo đức cao nhất đồng thời cung cấp thông tin liên lạc minh bạch trong suốt quá trình xử lý vụ việc của bạn.",
       link: {
         href: "#",
-        text: "Hỗ trợ 24/7",
+        text: "Đạo đức nghề nghiệp",
         icon: Award
       }
     }
@@ -119,50 +116,36 @@ export const servicesData = {
   heading: {
     title: "Dịch vụ pháp lý toàn diện",
     subtitle: "Trên tất cả các lĩnh vực hành nghề",
-    description: "Từ các hợp đồng giao dịch phức tạp đến các khiếu nại dân sự, bảo chữa dương sự hình sự, Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ đại diện chuyên môn trên nhiều lĩnh vực pháp luật."
+    description: "Từ Hợp đồng giao dịch phức tạp đến Khiếu nại Dân sự và Bào chữa Hình sự, Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ đại diện chuyên sâu trên mọi lĩnh vực pháp luật."
   },
   services: [
     {
       icon: BriefcaseBusiness,
-      title: "Luật Doanh nghiệp",
-      description: "Thành lập doanh nghiệp.Mua bán vốn góp chuyển nhượng cổ phần,tham gia các tổ chức tự doanh và tài chính khác.",
+      title: "Tham gia tố tụng theo quy định của pháp luật",
+      description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ đại diện và tham gia tố tụng chuyên nghiệp tại các cấp Tòa án và Cơ quan Nhà nước có thẩm quyền. Với kinh nghiệm dày dạn và nắm vững quy định pháp luật, chúng tôi cam kết bảo vệ tối đa quyền và lợi ích hợp pháp của khách hàng theo đúng trình tự và thủ tục do pháp luật quy định.",
       href: "/activity/corporate",
-      buttonText: "Tham khảo về Luật Doanh nghiệp"
+      buttonText: "Tham khảo về dịch vụ"
     },
     {
       icon: Users,
-      title: "Luật Dân sự",
-      description: "Giải quyết các vụ việc tranh chấp hợp đồng dân sự.Tranh chấp tư liệu thương tố và các hành vi vi dân tích.",
+      title: "Tư vấn pháp luật",
+      description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ Tư vấn Pháp luật chuyên sâu và toàn diện trên mọi lĩnh vực, văn phòng Luật sư Tùng Lâm lắng nghe, phân tích kỹ lưỡng các vấn đề của khách hàng và đưa ra ý kiến pháp lý rõ ràng, chính xác, giúp khách hàng nắm bắt rủi ro và đưa ra quyết định kinh doanh/cá nhân sáng suốt trong khuôn khổ pháp luật.",
       href: "/activity/civil",
       buttonText: "Tham khảo về Luật Dân sự"
     },
     {
-      icon: Heart,
-      title: "Luật Hôn nhân và Gia đình",
-      description: "Tư vấn, hướng dẫn xin thành thủ tục giải ly hôn, chia tài sản chung giữa vợ và chồng,quyền nuôi con và các vấn đề khác.",
+      icon: Handshake,
+      title: "Đại diện ngoài tố tụng",
+      description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ Đại diện Pháp lý Toàn diện, giúp quý khách hàng giải quyết mọi vấn đề pháp lý phức tạp ngoài tố tụng. Văn phòng Luật sư Tùng Lâm đại diện  trong các giao dịch, đàm phán hợp đồng, và thực hiện thủ tục hành chính phức tạp, đảm bảo mọi vấn đề được xử lý chính xác, nhanh chóng và đạt được mục tiêu của khách hàng mà không cần tiến hành các thủ tục tố tụng kéo dài",
       href: "/activity/family",
-      buttonText: "Tìm hiểu về Luật Hôn nhân Gia đình"
+      buttonText: "Tìm hiểu về Dịch vụ Đại diện Pháp lý"
     },
     {
-      icon: Home,
-      title: "Luật Đất đai",
-      description: "Tư vấn các thủ tục pháp lý liên quan đến việc sử dụng đất đai.Tách thửa họp đông và cấp bàng sở hữu nhà ở.Điều kiện của việc chuyển nhượng quyền sử dụng đất và tài sản khác.",
+      icon: Scale,
+      title: "Dịch vụ pháp lý",
+      description: "Văn phòng Luật sư Tùng Lâm cung cấp Dịch vụ pháp lý toàn diện được thiết kế để bảo vệ và tối đa hóa lợi ích của khách hàng. Các dịch vụ pháp lý chuyên sâu của chúng tôi bao gồm: Tư vấn Chiến lược, Đại diện ngoài Tố tụng trong đàm phán, giao dịch, và Tham gia Tố tụng chuyên nghiệp tại các cấp Tòa án. Văn phòng cam kết hành nghề chính trực và hiệu quả tối ưu trong mọi lĩnh vực.",
       href: "/activity/real-estate",
-      buttonText: "Tham khảo về Luật Đất đai"
-    },
-    {
-      icon: Shield,
-      title: "Luật Hình sự",
-      description: "Bào chữa tích cực cho bị cáo và bị can trong lĩnh vực tội phạm diện về an toàn tổng lê và dân chủ.",
-      href: "/activity/criminal",
-      buttonText: "Tham khảo về Luật Hình sự"
-    },
-    {
-      icon: Building,
-      title: "Luật Lao động",
-      description: "Tư vấn và hỗ trợ giải quyết các tranh chấp lao động.Thành lập hợp đồng và phàn xử về chính sách lao động.",
-      href: "/activity/labor",
-      buttonText: "Tham khảo về Luật Lao động"
+      buttonText: "Tham khảo về dịch vụ pháp lý"
     }
   ],
   cta: {
