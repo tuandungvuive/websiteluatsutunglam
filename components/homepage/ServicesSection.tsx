@@ -13,8 +13,8 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
-            <badge.icon className="w-4 h-4 text-blue-600 mr-2" />
-            <span className="text-blue-600 text-sm font-medium">
+            <badge.icon className="w-4 h-4 text-primary mr-2" />
+            <span className="text-primary text-sm font-medium">
               {badge.text}
             </span>
           </div>
@@ -35,7 +35,7 @@ export default function ServicesSection() {
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 h-full flex flex-col bg-background border-primary/10 hover:border-primary/30">
               <CardHeader className="pb-4">
                 <div className="w-16 h-16 bg-secondary border border-primary/20 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-8 h-8 text-blue-600" />
+                  <service.icon className="w-8 h-8 text-primary" />
                 </div>
                 <CardTitle className="text-xl font-bold text-foreground legal-heading">
                   {service.title}

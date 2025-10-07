@@ -15,16 +15,16 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="space-y-10">
             {/* Badge */}
-            <div className="inline-flex items-center px-6 py-3 bg-secondary border border-primary/20 rounded-full w-fit">
-              <badge.icon className="w-5 h-5 text-primary mr-3" />
-              <span className="text-blue-600  text-sm font-medium">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
+              <badge.icon className="w-4 h-4 text-primary mr-2" />
+              <span className="text-primary text-sm font-medium">
                 {badge.text}
               </span>
             </div>
 
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-4xl font-bold text-foreground leading-tight legal-heading">
+              <h1 className="text-4xl lg:text-3xl font-bold text-foreground leading-tight legal-heading">
                 {heading.title}
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed legal-text max-w-2xl">
@@ -55,7 +55,7 @@ export default function HeroSection() {
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center">
                   <div className="w-18 h-18 bg-secondary border border-primary/20 rounded-lg flex items-center justify-center mr-5 flex-shrink-0">
-                    <feature.icon className="w-9 h-9 text-blue-600" />
+                    <feature.icon className="w-9 h-9 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-2xl lg:text-2xl font-bold text-foreground leading-tight legal-heading">{feature.title}</h3>

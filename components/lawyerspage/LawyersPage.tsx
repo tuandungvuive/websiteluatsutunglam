@@ -25,7 +25,7 @@ export default function LawyersPage() {
       <section className="relative py-20 bg-white">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-6">
-            Gặp gỡ đội ngũ pháp lý của chúng tôi
+            Gặp gỡ đội ngũ nhân sự của chúng tôi
           </h1>
           <p className="text-lg text-center mx-auto max-w-4xl mb-10">
             Đội ngũ luật sư giàu kinh nghiệm của chúng tôi luôn tận tâm cung cấp dịch vụ đại 
@@ -84,8 +84,8 @@ export default function LawyersPage() {
       {/* Image Gallery Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Đội Ngũ Luật Sư Của Chúng Tôi
+          <h2 className="text-3xl font-bold text-center mb-4 text-primary">
+            Đội Ngũ Nhân Sự Của Chúng Tôi
           </h2>
           <p className="text-center mb-12 max-w-2xl mx-auto">
             Đội ngũ luật sư giàu kinh nghiệm và chuyên nghiệp, sẵn sàng hỗ trợ mọi vấn đề pháp lý của quý khách.
@@ -114,7 +114,7 @@ export default function LawyersPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             {/* Main Heading */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               {cta.heading.title}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -127,10 +127,10 @@ export default function LawyersPage() {
                 <Link 
                   key={index}
                   href={button.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
+                 className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${
                     button.variant === 'primary' 
-                      ? 'bg-black text-white hover:bg-gray-800' 
-                      : 'bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-600'
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl' 
+                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
                   }`}
                 >
                   {button.icon && <button.icon className="w-5 h-5 mr-2" />}

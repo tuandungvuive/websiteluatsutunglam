@@ -66,7 +66,7 @@ export default function BlogSection() {
                 </div>
                 <div className="flex items-center text-sm text-muted-foreground mb-3 legal-text">
                   <Clock className="w-4 h-4 mr-2 text-primary" />
-                  <span>Reading time: {post.readTime}</span>
+                  <span>Thời gian đọc: {post.readTime}</span>
                 </div>
                 <div className="flex items-center text-sm text-muted-foreground legal-text">
                   <Calendar className="w-4 h-4 mr-2 text-primary" />
@@ -78,7 +78,7 @@ export default function BlogSection() {
                   href={post.href}
                   className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-all duration-200 legal-button"
                 >
-                  Read Article
+                  Xem bài viết
                 </Link>
               </CardFooter>
             </Card>

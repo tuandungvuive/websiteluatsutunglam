@@ -39,16 +39,16 @@ export default function ContactFormSection() {
           {/* Left Section - Contact Info */}
           <div className="space-y-8">
             <div>
-              <div className="inline-flex items-center px-4 py-2 bg-blue-100 border border-blue-300 rounded-full mb-6">
-                <badge.icon className="w-4 h-4 text-blue-600 mr-2" />
-                <span className="text-blue-600 text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
+                <badge.icon className="w-4 h-4 text-primary mr-2" />
+                <span className="text-primary text-sm font-medium">
                   {badge.text}
                 </span>
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 {heading.title}
               </h2>
-              <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
                 {heading.subtitle}
               </h2>
               <p className="text-lg text-gray-600 mb-8">
@@ -61,7 +61,7 @@ export default function ContactFormSection() {
               {contactInfo.map((item, index) => (
                 <div key={index} className="flex items-center">
                   <div className="w-16 h-16 bg-blue-100 border border-blue-200 rounded-full flex items-center justify-center mr-5 flex-shrink-0">
-                    {React.createElement(item.icon, { className: "w-8 h-8 text-blue-600" })}
+                    {React.createElement(item.icon, { className: "w-8 h-8 text-primary" })}
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 text-base mb-1">
@@ -83,10 +83,10 @@ export default function ContactFormSection() {
                 <a 
                   key={index}
                   href={button.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
+                 className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${
                     button.variant === 'primary' 
-                      ? 'bg-black text-white hover:bg-gray-800' 
-                      : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-100'
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl' 
+                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
                   }`}
                 >
                   {button.icon && React.createElement(button.icon, { className: "w-5 h-5 mr-2" })}
