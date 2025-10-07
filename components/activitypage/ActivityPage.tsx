@@ -32,7 +32,7 @@ export default function ActivityPage() {
               <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 {hero.heading.title}
               </h1>
-              <h2 className="text-3xl lg:text-5xl font-bold text-blue-600 leading-tight">
+              <h2 className="text-3xl lg:text-5xl font-bold text-primary leading-tight">
                 {hero.heading.subtitle}
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -46,10 +46,10 @@ export default function ActivityPage() {
                 <Link 
                   key={index}
                   href={button.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
+                  className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${
                     button.variant === 'primary' 
-                      ? 'bg-black text-white hover:bg-gray-800' 
-                      : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-50'
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl' 
+                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
                   }`}
                 >
                   {button.icon && <button.icon className="w-5 h-5 mr-2" />}
@@ -67,12 +67,12 @@ export default function ActivityPage() {
           {/* Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
-              <services.badge.icon className="w-4 h-4 text-blue-600 mr-2" />
-              <span className="text-blue-600 text-sm font-medium">
+              <services.badge.icon className="w-4 h-4 text-primary mr-2" />
+              <span className="text-primary text-sm font-medium">
                 {services.badge.text}
               </span>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               {services.heading.title}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -86,7 +86,7 @@ export default function ActivityPage() {
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 h-full flex flex-col bg-background border-primary/10 hover:border-primary/30">
                 <CardHeader className="pb-4">
                   <div className="w-16 h-16 bg-secondary border border-primary/20 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600" />
+                    <service.icon className="w-8 h-8 text-primary" />
                   </div>
                   <CardTitle className="text-xl font-bold text-foreground legal-heading">
                     {service.title}
@@ -117,7 +117,7 @@ export default function ActivityPage() {
         <div className="container mx-auto px-4">
           {/* Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               {whyChooseUs.heading.title}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -128,10 +128,10 @@ export default function ActivityPage() {
           {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseUs.features.map((feature, index) => (
-              <Card key={index} className="text-center p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 h-full flex flex-col bg-background border-primary/10 hover:border-primary/30 text-center ">
                 <CardContent className="pt-6 flex-1">
                   <div className="w-16 h-16 bg-blue-50 border border-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-blue-600" />
+                    <feature.icon className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">
                     {feature.title}
@@ -151,7 +151,7 @@ export default function ActivityPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             {/* Main Heading */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               {cta.heading.title}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -164,10 +164,10 @@ export default function ActivityPage() {
                 <Link 
                   key={index}
                   href={button.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
+                  className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${
                     button.variant === 'primary' 
-                      ? 'bg-black text-white hover:bg-gray-800' 
-                      : 'bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-600'
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl' 
+                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
                   }`}
                 >
                   {button.icon && <button.icon className="w-5 h-5 mr-2" />}

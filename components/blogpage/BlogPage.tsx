@@ -70,8 +70,8 @@ export default function BlogPage() {
       {/* Featured Blog Post */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
-            <Bookmark className="text-blue-600" /> 
+          <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 text-primary">
+            <Bookmark className="text-primary" /> 
             <span>Bài blog nổi bật</span>
           </h2>
           
@@ -105,12 +105,12 @@ export default function BlogPage() {
               <Card className="h-full border shadow-md">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="mb-4">
-                    <Badge className="bg-blue-50 text-blue-700 hover:bg-blue-100">
+                    <Badge className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6 text-primary">
                       <Briefcase className="w-4 h-4 mr-2" />
                       {featuredPost.categoryLabel}
                     </Badge>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
                     {featuredPost.title}
                   </h3>
                   <p className="text-gray-600 mb-6 flex-grow">
@@ -118,15 +118,15 @@ export default function BlogPage() {
                   </p>
                   <div className="flex items-center gap-6 mb-6">
                     <div className="flex items-center">
-                      <User className="w-5 h-5 text-blue-600 mr-2" />
+                      <User className="w-5 h-5 text-primary mr-2" />
                       <span className="text-sm text-gray-700">{featuredPost.author}</span>
                     </div>
                     <div className="flex items-center">
-                      <Clock className="w-5 h-5 text-blue-600 mr-2" />
+                      <Clock className="w-5 h-5 text-primary mr-2" />
                       <span className="text-sm text-gray-700">{featuredPost.readTime}</span>
                     </div>
                     <div className="flex items-center">
-                      <Calendar className="w-5 h-5 text-blue-600 mr-2" />
+                      <Calendar className="w-5 h-5 text-primary mr-2" />
                       <span className="text-sm text-gray-700">{featuredPost.date}</span>
                     </div>
                   </div>
@@ -146,12 +146,12 @@ export default function BlogPage() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
             <div className="flex items-center gap-2">
               <div className="p-2 bg-blue-50 rounded-lg">
-                <Filter className="text-blue-600 h-5 w-5" />
+                <Filter className="text-primary h-5 w-5" />
               </div>
               <h2 className="text-2xl font-bold">Danh mục bài viết</h2>
             </div>
-            <div className="flex items-center gap-2 text-gray-500 bg-gray-50 px-4 py-2 rounded-full">
-              <Tag className="h-4 w-4 text-gray-400" />
+            <div className="flex items-center gap-2 text-primary bg-blue-50 px-4 py-2 rounded-full">
+              <Tag className="h-4 w-4 text-primary" />
               <p className="text-sm">
                 Chọn danh mục để lọc các bài viết liên quan
               </p>
@@ -164,7 +164,7 @@ export default function BlogPage() {
                 key={category.id}
                 className={`cursor-pointer transition-all duration-300 overflow-hidden h-full ${
                   activeCategory === category.id 
-                    ? "border-2 border-blue-600 shadow-md" 
+                    ? "border-2 border-blue-900 shadow-md" 
                     : "border border-gray-200 hover:border-blue-300 hover:shadow"
                 }`}
                 onClick={() => setActiveCategory(category.id)}
@@ -178,20 +178,20 @@ export default function BlogPage() {
                     {category.icon ? (
                       <category.icon className={`w-6 h-6 ${
                         activeCategory === category.id
-                          ? "text-blue-600" 
+                          ? "text-primary" 
                           : "text-gray-700"
                       }`} />
                     ) : (
                       <FileText className={`w-6 h-6 ${
                         activeCategory === category.id
-                          ? "text-blue-600" 
+                          ? "text-primary" 
                           : "text-gray-700"
                       }`} />
                     )}
                   </div>
                   <h3 className={`font-medium text-sm ${
                     activeCategory === category.id
-                      ? "text-blue-600" 
+                      ? "text-primary" 
                       : "text-gray-800"
                   }`}>
                     {category.label}
@@ -222,12 +222,12 @@ export default function BlogPage() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 gap-8">
             <div className="flex-1">
               <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full mb-6">
-                <FileText className="w-4 h-4 text-blue-600 mr-2" />
-                <span className="text-blue-600 text-sm font-medium">
+                <FileText className="w-4 h-4 text-primary mr-2" />
+                <span className="text-primary text-sm font-medium">
                   {activeCategory === 'all' ? 'Cập nhật mới nhất' : 'Danh mục đã chọn'}
                 </span>
               </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
                 {activeCategory === 'all' 
                   ? 'Bài blog gần đây' 
                   : `Bài viết về ${categories.find(cat => cat.id === activeCategory)?.label || ''}`}
@@ -244,14 +244,14 @@ export default function BlogPage() {
                 <Button 
                   variant="outline" 
                   onClick={() => setActiveCategory('all')}
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
                   Xem tất cả bài viết
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               ) : (
                 <Link href="/blog">
-                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
+                  <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                     Tất cả các bài viết
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
@@ -274,7 +274,7 @@ export default function BlogPage() {
                     />
                   </div>
                   <CardHeader className="p-6 pb-4">
-                    <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-sm font-medium text-blue-600 mb-4 w-fit">
+                    <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-sm font-medium text-primary mb-4 w-fit">
                       <Briefcase className="w-3 h-3 mr-1" />
                       {post.categoryLabel}
                     </div>
@@ -287,22 +287,22 @@ export default function BlogPage() {
                   </CardHeader>
                   <CardContent className="px-6 pt-0 pb-0">
                     <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <User className="w-4 h-4 mr-2 text-blue-600" />
+                      <User className="w-4 h-4 mr-2 text-primary" />
                       <span>Tác giả: {post.author}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <Clock className="w-4 h-4 mr-2 text-blue-600" />
+                      <Clock className="w-4 h-4 mr-2 text-primary" />
                       <span>Thời gian đọc: {post.readTime}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <Calendar className="w-4 h-4 mr-2 text-blue-600" />
+                      <Calendar className="w-4 h-4 mr-2 text-primary" />
                       <span>{post.date}</span>
                     </div>
                   </CardContent>
                   <CardFooter className="p-6 pt-4 flex justify-center mt-auto">
                     <Button 
                       variant="default"
-                      className="bg-blue-600 text-white hover:bg-blue-700"
+                      className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-all duration-200 legal-button"
                     >
                       Xem bài viết
                     </Button>
@@ -313,12 +313,12 @@ export default function BlogPage() {
               <div className="col-span-1 md:col-span-2 lg:col-span-3 py-16 text-center">
                 <div className="bg-white border border-gray-200 rounded-xl p-10 max-w-lg mx-auto shadow-sm">
                   <div className="rounded-full bg-blue-50 p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                    <FileText className="w-10 h-10 text-blue-600" />
+                    <FileText className="w-10 h-10 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Không tìm thấy bài viết</h3>
                   <p className="text-gray-600 mb-6 text-lg">
                     Hiện chưa có bài viết nào trong danh mục{' '}
-                    <span className="font-medium text-blue-600">
+                    <span className="font-medium text-primary">
                       {categories.find(cat => cat.id === activeCategory)?.label || ''}
                     </span>
                   </p>
@@ -354,7 +354,7 @@ export default function BlogPage() {
 
           {filteredPosts.length > 0 && (
             <div className="mt-12 text-center">
-              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
+              <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 Tải thêm bài viết {filteredPosts.length > 6 ? `(${filteredPosts.length - 6} bài còn lại)` : ''}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -368,7 +368,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             {/* Main Heading */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               {cta.heading.title}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -381,10 +381,10 @@ export default function BlogPage() {
                 <Link
                   key={index}
                   href={button.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
-                    button.variant === "primary"
-                      ? "bg-black text-white hover:bg-gray-800"
-                      : "bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-600"
+                  className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${
+                    button.variant === 'primary' 
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl' 
+                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
                   }`}
                 >
                   {button.icon && <button.icon className="w-5 h-5 mr-2" />}

@@ -27,7 +27,7 @@ export const activityData = {
       title: "Hoạt động hành nghề tại",
       subtitle: "Văn phòng Luật sư Tùng Lâm"
     },
-    description: "Văn phòng Luật sư Tùng Lâm cung cấp các dịch vụ pháp lý toàn diện trên nhiều lĩnh vực pháp lý nhà nước Việt Nam. Văn phòng của chúng tôi kết hợp kiến thức pháp lý sâu rộng với hiểu biết thực tế về kinh doanh để mang lại kết quả vượt trội cho khách hàng của chúng tôi.",
+    description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ pháp lý toàn diện, chuyên cung cấp các giải pháp pháp lý trong khuôn khổ pháp luật Việt Nam. Điểm khác biệt của chúng tôi là sự kết hợp nhuần nhuyễn giữa kiến thức pháp luật chuyên sâu và kinh nghiệm kinh doanh thực tiễn, cam kết mang lại những kết quả vượt trội và tối ưu hóa lợi ích thương mại cho mọi khách hàng.",
     buttons: [
       {
         href: "/contact",
@@ -50,14 +50,14 @@ export const activityData = {
     heading: {
       title: "Tổng quan về hoạt động hành nghề"
     },
-    description: "Văn phòng chúng tôi cung cấp đầy đủ các dịch vụ pháp lý được thiết kế để đáp ứng các nhu cầu đa dạng của cá nhân, gia đình và doanh nghiệp. Mỗi lĩnh vực hành nghề đều được hỗ trợ bởi luật sư có chuyên môn sâu và thành tích thành công đã được chứng minh.",
+    description: "Văn phòng chúng tôi cung cấp các dịch vụ pháp lý toàn diện, đáp ứng mọi nhu cầu đa dạng từ cá nhân, gia đình đến doanh nghiệp. Mỗi lĩnh vực hành nghề đều được đảm nhận bởi luật sư chuyên môn sâu, đảm bảo chất lượng dịch vụ ở mức cao nhất.",
     practiceAreas: servicesData.services
   },
   whyChooseUs: {
     heading: {
       title: "Tại sao bạn nên chọn văn phòng Luật sư Tùng Lâm"
     },
-    description: "Cách tiếp cận toàn diện, thành tích đã được chứng minh và cam kết phục vụ khách hàng của chúng tôi khiến chúng tôi trở thành sự lựa chọn đúng đắn cho nhu cầu pháp lý của bạn trên mọi lĩnh vực hành nghề.",
+    description: "Với cách tiếp cận toàn diện, thành tích đã được chứng minh và cam kết phục vụ khách hàng, chúng tôi là lựa chọn hoàn hảo cho mọi nhu cầu pháp lý của bạn trên mọi lĩnh vực hành nghề.",
     features: [
       {
         icon: Scale,
@@ -66,7 +66,7 @@ export const activityData = {
       },
       {
         icon: Users,
-        title: "Đặt khách hàng làm trọng tâm",
+        title: "Khách hàng làm trọng tâm",
         description: "Sự quan tâm cá nhân và các chiến lược pháp lý được thiết kế riêng theo nhu cầu của từng khách hàng."
       },
       {
@@ -85,7 +85,7 @@ export const activityData = {
     heading: {
       title: "BẠN CẦN TƯ VẤN/ GIẢI QUYẾT VẤN ĐỀ PHÁP LÝ ?"
     },
-    description: "Đừng chần chừ để nhận được sự trợ giúp pháp lý mà bạn cần. Văn phòng chúng tôi sẵn sàng cung cấp hướng dẫn chuyên môn và sự đại diện tích cực mà bạn xứng đáng được hưởng. Liên hệ với chúng tôi ngay hôm nay để được tư vấn.",
+    description: "Hãy để chúng tôi đồng hành cùng bạn. Chúng tôi cam kết cung cấp sự đại diện pháp lý tận tâm cùng hướng dẫn chuyên sâu mà khách hàng xứng đáng nhận được. Hãy gọi cho chúng tôi ngay để bắt đầu buổi tư vấn.",
     buttons: [
       {
         href: "tel:0938571549",
