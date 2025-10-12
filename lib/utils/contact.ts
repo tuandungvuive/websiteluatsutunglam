@@ -14,15 +14,15 @@ export const contactData = {
         title: "SĐT liên hệ",
         description: "Nói chuyện trực tiếp với chúng tôi",
         actionText: "0938571549",
-        actionHref: "tel:0938571549",
+        actionHref: "https://zalo.me/0938571549",
         buttonText: "0938571549"
       },
       {
         icon: Mail,
         title: "Email của chúng tôi",
         description: "Gửi yêu cầu đến chúng tôi",
-        actionText: "contact@luatsutunglam.vn",
-        actionHref: "mailto:contact@luatsutunglam.vn",
+        actionText: "vanphongluatsutunglam@gmail.com",
+        actionHref: "mailto:vanphongluatsutunglam@gmail.com",
         buttonText: "Gửi Mail"
       },
       {
@@ -30,7 +30,7 @@ export const contactData = {
         title: "Địa chỉ văn phòng",
         description: "Hãy đến văn phòng của chúng tôi",
         actionText: "Xem bản đồ",
-        actionHref: "https://maps.google.com",
+        actionHref: "https://www.google.com/maps/place/399+B%C3%ACnh+L%E1%BB%A3i,+Ph%C6%B0%E1%BB%9Dng+13,+B%C3%ACnh+Th%E1%BA%A1nh,+H%E1%BB%93+Ch%C3%AD+Minh,+Vietnam/@10.8361195,106.6992427,17z/data=!3m1!4b1!4m6!3m5!1s0x31752860ee3d558b:0xc12f1fb4201a417b!8m2!3d10.8361142!4d106.701823!16s%2Fg%2F11j8gz_yc5?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D",
         buttonText: "Địa chỉ"
       },
       {
@@ -51,14 +51,15 @@ export const CONTACT_INFO = {
     city: "Thành phố Hồ Chí Minh",
   },
   email: {
-    primary: "ls_songtung@yahoo.com - Luật sư Lê Song Tùng",
+    primary1: "ls_songtung@yahoo.com - Luật sư Lê Song Tùng",
+    primary2: "vanphongluatsutunglam@gmail.com - Văn phòng Luật sư Tùng Lâm",
     support: "tuandungvule@gmail.com - Cộng sự Lê Anh Tuấn Dũng",
   },
   phone: {
     primary: "0938571549",
     label: "0938571549 (Số Zalo)",
     phoneowner: "Luật sư Lê Song Tùng -Trưởng văn phòng",
-    additional: "0901373986 (Số Zalo) - Bà Lê Thị Liên",
+    additional: "0932018266 (Số Zalo) - Bà Lê Thị Liên",
   },
   responseTime: {
     label: "Dịch vụ thường trả lời trong vòng",

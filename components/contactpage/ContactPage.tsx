@@ -89,7 +89,7 @@ export default function ContactPage() {
 
             {/* Quick Contact Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="tel:0938571549">
+              <Link href="https://zalo.me/0938571549">
                 <Button
                   variant="default"
                   className="bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl"
@@ -354,7 +354,7 @@ export default function ContactPage() {
                             >
                               <FormControl>
                                 <SelectTrigger className="w-full">
-                                  <SelectValue placeholder="Chọn loại hình Luật" />
+                                  <SelectValue placeholder="Chọn loại hình dịch vụ" />
                                 </SelectTrigger>
                               </FormControl>
                               <SelectContent>
@@ -671,8 +671,11 @@ export default function ContactPage() {
                         Email liên hệ
                       </h4>
                       <p className="text-gray-600">
-                        ls_songtung@yahoo.com - Luật sư Lê Song Tùng
+                        ls_songtung@yahoo.com - Luật sư Lê Song Tùng 
                       </p>
+                      <p className="text-gray-600">
+                       vanphongluatsutunglam@gmail.com - Văn phòng Luật sư Tùng Lâm
+                         </p>
                       <p className="text-gray-600">
                         tuandungvule@gmail.com- Cộng sự Lê Anh Tuấn Dũng
                       </p>
@@ -734,10 +737,17 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <Link
-                    href={`mailto:${CONTACT_INFO.email.primary.split(' - ')[0]}`}
+                    href={`mailto:${CONTACT_INFO.email.primary1.split(' - ')[0]}`}
                     className="text-gray-900 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline"
                   >
-                    {CONTACT_INFO.email.primary}
+                    {CONTACT_INFO.email.primary1}
+                  </Link>
+                  <br />
+                  <Link
+                    href={`mailto:${CONTACT_INFO.email.primary2.split(' - ')[0]}`}
+                    className="text-gray-900 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline"
+                  >
+                    {CONTACT_INFO.email.primary2}
                   </Link>
                   <br />
                   <Link
@@ -759,7 +769,7 @@ export default function ContactPage() {
                     Phone
                   </h3>
                   <Link
-                    href={`tel:${CONTACT_INFO.phone.primary}`}
+                    href={`https://zalo.me/0938571549`}
                     className="text-gray-900 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline"
                   >
                     {CONTACT_INFO.phone.label}
@@ -768,7 +778,7 @@ export default function ContactPage() {
                     {CONTACT_INFO.phone.phoneowner}
                   </p>
                   <Link
-                    href={`tel:${CONTACT_INFO.phone.additional?.split(' ')[0]}`}
+                    href={`https://zalo.me/0932018266`}
                     className="text-gray-900 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:underline"
                   >
                     {CONTACT_INFO.phone.additional}

@@ -271,7 +271,7 @@ export const courseData = {
       },
       {
         text: "0938571549 - Luật sư Lê Song Tùng",
-        href: "tel:0938571549",
+        href: "https://zalo.me/0938571549",
         variant: "primary",
         icon: "phone"
       }

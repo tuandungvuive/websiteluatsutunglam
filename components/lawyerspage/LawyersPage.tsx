@@ -28,9 +28,7 @@ export default function LawyersPage() {
             Gặp gỡ đội ngũ nhân sự của chúng tôi
           </h1>
           <p className="text-lg text-center mx-auto max-w-4xl mb-10">
-            Đội ngũ luật sư giàu kinh nghiệm của chúng tôi luôn tận tâm cung cấp dịch vụ đại 
-            diện pháp lý đặc biệt với sự chỉnh trực, chuyên nghiệp và cam kết đạt được kết 
-            quả tốt nhất cho khách hàng.
+           Với luật sư giỏi chuyên môn, giàu kinh nghiệm, tận tâm và tuân thủ đạo đức nghề nghiệp luật sư; Văn phòng luật sư Tùng Lâm đã tạo được niềm tin và sự hài lòng cho Quý Khách hàng khi đến với Văn phòng.
           </p>
           
           {/* Featured Carousel */}

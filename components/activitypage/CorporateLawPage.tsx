@@ -7,15 +7,15 @@ import { activityData, corporateLawData } from '@/lib/utils/activity';
 export default function CorporateLawPage() {
   const { cta } = activityData;
   const { backLink, hero, mainContent, professionalAreas, sidebar, services } = corporateLawData;
-  
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header with Back Button */}
       <section className="bg-white py-8">
         <div className="container mx-auto px-4">
-          <Link 
+          <Link
             href={backLink.href}
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors mb-6"
+            className="inline-flex items-center text-primary hover:text-blue-800 transition-colors mb-6"
           >
             <backLink.icon className="w-5 h-5 mr-2" />
             {backLink.text}
@@ -28,11 +28,11 @@ export default function CorporateLawPage() {
         <div className="container mx-auto px-4">
           <div className="flex items-center mb-6">
             <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-              <hero.icon className="w-8 h-8 text-blue-600" />
+              <hero.icon className="w-8 h-8 text-primary" />
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">{hero.title}</h1>
-              <div className="inline-flex items-center bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+              <h1 className="text-4xl font-bold text-primary mb-2">{hero.title}</h1>
+              <div className="inline-flex items-center bg-blue-100 text-primary text-sm font-medium px-3 py-1 rounded-full">
                 {hero.badge}
               </div>
             </div>
@@ -47,11 +47,10 @@ export default function CorporateLawPage() {
               <Link
                 key={index}
                 href={button.href}
-                className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
-                  button.variant === 'primary' 
-                    ? 'bg-black text-white hover:bg-gray-800' 
-                    : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-                }`}
+                className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${button.variant === 'primary'
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl'
+                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+                  }`}
               >
                 {button.icon && <button.icon className="w-5 h-5 mr-2" />}
                 {button.text}
@@ -69,10 +68,10 @@ export default function CorporateLawPage() {
             <div className="lg:col-span-3">
               <div className="bg-white rounded-lg p-8 mb-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <mainContent.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <mainContent.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900">{mainContent.title}</h2>
+                  <h2 className="text-2xl font-bold text-primary">{mainContent.title}</h2>
                 </div>
 
                 <div className="prose max-w-none">
@@ -87,17 +86,17 @@ export default function CorporateLawPage() {
               {/* Professional Areas Section - Moved to Left Column */}
               <div className="bg-white rounded-lg p-8">
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <professionalAreas.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                    <professionalAreas.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{professionalAreas.title}</h3>
+                  <h3 className="text-2xl font-bold text-primary">{professionalAreas.title}</h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {professionalAreas.areas.map((area, index) => (
                     <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors">
-                      <area.icon className="w-5 h-5 text-blue-600 mr-3 flex-shrink-0" />
-                      <span className="text-sm font-medium text-gray-800">{area.title}</span>
+                      <area.icon className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                      <span className="text-sm font-medium text-primary">{area.title}</span>
                     </div>
                   ))}
                 </div>
@@ -111,9 +110,9 @@ export default function CorporateLawPage() {
                 <CardContent className="p-6">
                   <div className="text-center mb-4">
                     <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <sidebar.contact.icon className="w-8 h-8 text-blue-600" />
+                      <sidebar.contact.icon className="w-8 h-8 text-primary" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg font-bold text-primary mb-2">
                       {sidebar.contact.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-4">
@@ -123,11 +122,11 @@ export default function CorporateLawPage() {
                       <Link
                         key={index}
                         href={button.href}
-                        className={`block w-full text-center py-3 rounded-lg font-medium transition-colors mb-3 ${
-                          button.variant === 'primary' 
-                            ? 'bg-black text-white hover:bg-gray-800' 
-                            : 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50'
-                        }`}
+                        className={`binline-flex items-center justify-center px-8 py-3 font-medium rounded-lg transition-all duration-200 legal-button block w-full text-center mb-3 
+                          ${button.variant === 'primary'
+                            ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl'
+                            : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+                          }`}
                       >
                         {button.icon && <button.icon className="w-5 h-5 mr-2 inline-block" />}
                         {button.text}
@@ -141,13 +140,13 @@ export default function CorporateLawPage() {
               <Card className="mb-8">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <sidebar.specialties.icon className="w-6 h-6 text-blue-600 mr-2" />
-                    <h3 className="text-lg font-bold text-gray-900">{sidebar.specialties.title}</h3>
+                    <sidebar.specialties.icon className="w-6 h-6 text-primary mr-2" />
+                    <h3 className="text-lg font-bold text-primary">{sidebar.specialties.title}</h3>
                   </div>
                   <div className="space-y-3">
                     {sidebar.specialties.items.map((item, index) => (
                       <div key={index} className="border border-gray-200 rounded-lg p-4">
-                        <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
+                        <h4 className="font-semibold text-primary mb-1">{item.title}</h4>
                         <p className="text-sm text-gray-600">{item.description}</p>
                       </div>
                     ))}
@@ -158,7 +157,7 @@ export default function CorporateLawPage() {
               {/* Related Areas Card */}
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">{sidebar.relatedAreas.title}</h3>
+                  <h3 className="text-lg font-bold text-primary mb-4">{sidebar.relatedAreas.title}</h3>
                   <div className="space-y-2">
                     {sidebar.relatedAreas.links.map((link, index) => (
                       <Link key={index} href={link.href} className="block text-blue-600 hover:text-blue-800 transition-colors">
@@ -176,7 +175,7 @@ export default function CorporateLawPage() {
       {/* Services Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          <h2 className="text-3xl font-bold text-primary text-center mb-12">
             {services.title}
           </h2>
 
@@ -186,10 +185,10 @@ export default function CorporateLawPage() {
                 <CardContent className="p-6">
                   <div className="flex items-start mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <service.icon className="w-6 h-6 text-blue-600" />
+                      <service.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                      <h3 className="text-xl font-bold text-primary mb-2">{service.title}</h3>
                       <p className="text-gray-600">{service.description}</p>
                     </div>
                   </div>
@@ -204,7 +203,7 @@ export default function CorporateLawPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             {/* Main Heading */}
-            <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
               {cta.heading.title}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
@@ -214,14 +213,14 @@ export default function CorporateLawPage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {cta.buttons.map((button, index) => (
-                <Link 
+                <Link
                   key={index}
                   href={button.href}
-                  className={`inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-colors ${
+                  className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${
                     button.variant === 'primary' 
-                      ? 'bg-black text-white hover:bg-gray-800' 
-                      : 'bg-white text-blue-600 hover:bg-blue-50 border-2 border-blue-600'
-                  }`}
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl' 
+                      : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+                    }`}
                 >
                   {button.icon && <button.icon className="w-5 h-5 mr-2" />}
                   {button.text}
