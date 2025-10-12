@@ -27,22 +27,33 @@ export default function HeroSection() {
               <h1 className="text-4xl lg:text-3xl font-bold text-foreground leading-tight legal-heading">
                 {heading.title}
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed legal-text max-w-2xl">
-                {heading.description}
+              <p className="text-lg text-muted-foreground leading-relaxed legal-text max-w-2xl">
+                {heading.description1}
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed legal-text max-w-2xl">
+                {heading.description2}
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed legal-text max-w-2xl">
+                {heading.description3}
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed legal-text max-w-2xl">
+                {heading.description4}
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed legal-text max-w-2xl">
+                {heading.description5}
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6">
               {buttons.map((button, index) => (
-                <Link 
+                <Link
                   key={index}
                   href={button.href}
-                  className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${
-                    button.variant === 'primary' 
-                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl' 
+                  className={`inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-all duration-200 legal-button ${button.variant === 'primary'
+                      ? 'bg-black text-primary-foreground hover:bg-gray-800 shadow-lg hover:shadow-xl'
                       : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
-                  }`}
+                    }`}
                 >
                   {button.icon && <button.icon className="w-5 h-5 mr-3" />}
                   {button.text}
@@ -68,12 +79,13 @@ export default function HeroSection() {
 
           {/* Right Image */}
           <div className="relative">
-            <div className="bg-muted rounded-2xl aspect-auto flex items-center justify-center overflow-hidden shadow-2xl">
-              <Image 
-                src="/no_image.jpg" 
-                alt="Hình ảnh sẽ được thêm vào sau" 
-                width={480}
-                height={600}
+            <div className="bg-muted rounded-2xl aspect-auto flex items-center justify-center overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-300">
+              <Image
+                src="/no_image.jpg"
+                alt="Hình ảnh sẽ được thêm vào sau"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                width={640}
+                height={800}
                 className="object-cover w-full h-full"
               />
             </div>

@@ -13,6 +13,11 @@ import {
   ShieldCheck,
   BookOpen,
   Heart,
+  Shield,
+  Landmark,
+  Lightbulb,
+  SearchCheck,
+  FilePen,
 } from 'lucide-react';
 import { servicesData } from './constants';
 
@@ -88,7 +93,7 @@ export const activityData = {
     description: "Hãy để chúng tôi đồng hành cùng bạn. Chúng tôi cam kết cung cấp sự đại diện pháp lý tận tâm cùng hướng dẫn chuyên sâu mà khách hàng xứng đáng nhận được. Hãy gọi cho chúng tôi ngay để bắt đầu buổi tư vấn.",
     buttons: [
       {
-        href: "tel:0938571549",
+        href: "https://zalo.me/0938571549",
         text: "0938571549 - Luật sư Lê Song Tùng",
         icon: Phone,
         variant: "primary" as const
@@ -112,18 +117,18 @@ export const corporateLawData = {
   },
   hero: {
     icon: BriefcaseBusiness,
-    title: "Luật Doanh nghiệp",
-    badge: "12+ Năm kinh nghiệm",
-    description: "Dịch vụ pháp lý toàn diện cho doanh nghiệp thuộc mọi quy mô, từ các công ty khởi nghiệp đến các công ty/ doanh nghiệp. Văn phòng của chúng tôi cung cấp tư vấn pháp lý chiến lược, giúp doanh nghiệp vượt qua mọi trường pháp lý phức tạp và đạt được mục tiêu thương mại.",
+    title: "Tham gia tố tụng theo quy định của pháp luật",
+    badge: "12+ năm kinh nghiệm hành nghề",
+    description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ đại diện và tham gia tố tụng chuyên nghiệp tại các cấp Tòa án và Cơ quan Nhà nước có thẩm quyền. Với kinh nghiệm dày dạn và nắm vững quy định pháp luật, chúng tôi cam kết bảo vệ tối đa quyền và lợi ích hợp pháp của khách hàng theo đúng trình tự và thủ tục do pháp luật quy định.",
     buttons: [
       {
-        href: "tel:0938571549",
+        href: "https://zalo.me/0938571549",
         text: "Đặt lịch hẹn",
         icon: Phone,
         variant: "primary" as const
       },
       {
-        href: "/contact",
+        href: "/activity",
         text: "Tham khảo trang dịch vụ hành nghề",
         variant: "secondary" as const
       }
@@ -131,43 +136,50 @@ export const corporateLawData = {
   },
   mainContent: {
     icon: BriefcaseBusiness,
-    title: "Luật Doanh nghiệp",
+    title: "Tham gia tố tụng theo quy định của pháp luật",
     description: [
-      "Văn phòng của chúng tôi cung cấp tư vấn pháp lý chiến lược, giúp doanh nghiệp vượt qua mọi trường pháp lý phức tạp, cấu trúc giao dịch và đạt được mục tiêu thương mại. Chúng tôi hợp tác chặt chẽ với các doanh nhân, công ty đã thành lập và nhà đầu tư để cung cấp các giải pháp thiết thực hỗ trợ tăng trưởng kinh doanh đồng thời giảm thiểu rủi ro pháp lý.",
-      "Với hơn 12 năm kinh nghiệm trong lĩnh vực luật doanh nghiệp, văn phòng của chúng tôi đã xử lý thành công hơn 500 vụ việc doanh nghiệp, từ việc thành lập doanh nghiệp đơn giản đến các giao dịch phức tạp trị giá hàng tỷ đô la. Chúng tôi hiểu rằng mỗi doanh nghiệp đều có những đặc thù riêng, và chúng tôi điều chỉnh phương pháp tiếp cận để đáp ứng nhu cầu và mục tiêu cụ thể của từng khách hàng.",
-      "Văn phòng của chúng tôi luôn cập nhật các quy định và xu hướng thị trường đang thay đổi, đảm bảo khách hàng nhận được tư vấn vừa hợp lý về mặt pháp lý vừa thực tiễn về mặt thương mại. Chúng tôi tự hào xây dựng mối quan hệ lâu dài với khách hàng, đóng vai trò là cố vấn đáng tin cậy trong suốt vòng đời kinh doanh của họ."
+      "Tố tụng là trình tự, thủ tục do pháp luật quy định nhằm giải quyết các tranh chấp, vi phạm pháp luật phát sinh trong các lĩnh vực dân sự, hình sự và hành chính tại cơ quan nhà nước có thẩm quyền.",
+      "Chủ thể tham gia tố tụng được xác định dựa trên tính chất của quan hệ pháp luật và lĩnh vực pháp luật cụ thể.",
+      "Việc tham gia tố tụng của người đại diện của đương sự trong tố tụng dân sự có ý nghĩa rất lớn đối với việc giải quyết các vụ án dân sự, đặc biệt trong trường hợp đương sự không tự thực hiện các quyền và nghĩa vụ tố tụng của mình. Những quy định về người đại diện của đương sự được quy định tại Bộ luật Dân sự năm 2015.",
+      "Người đại diện của đương sự tham gia tố tụng dân sự là người thay mặt đương sự thực hiện các quyền, nghĩa vụ tố tụng để bảo vệ quyền và lợi ích hợp pháp cho đương sự trước Tòa án.",
+      "Căn cứ Điều 85 của Bộ luật Tố tụng Dân sự năm 2015: “Người đại diện trong tố tụng dân sự bao gồm người đại diện theo pháp luật và người đại diện theo ủy quyền. Người đại diện có thể là cá nhân hoặc pháp nhân theo quy định của Bộ luật Dân sự.”",
+      "Dựa vào vào ý chí của đương sự, pháp luật tố tụng dân sự hiện hành chia người đại diện thành hai loại: Người đại diện theo pháp luật và người đại diện theo uỷ quyền. Ngoài ra, người đại diện trong tố tụng dân sự còn có thể do Tòa án chỉ định.",
+      "Thông qua đó, Luật sư tại văn phòng Luật sư Tùng Lâm tham gia tố tụng tại Tòa án các cấp với tư cách là:",
+      "* Người bào chữa cho người bị tạm giữ, bị can, bị cáo hoặc là Người bảo vệ quyền lợi của người bị hại, nguyên đơn dân sự, bị đơn dân sự, người có quyền lợi, nghĩa vụ liên quan trong vụ án tố tụng.",
+      "* Người đại diện hoặc là người bảo vệ quyền, lợi ích hợp pháp của nguyên đơn, bị đơn, người có quyền lợi, nghĩa vụ liên quan trong các vụ án về tranh chấp dân sự, hôn nhân và gia đình, kinh doanh, thương mại, lao động, hành chính, việc về yêu cầu dân sự, hôn nhân và gia đình, kinh doanh, thương mại, lao động và các vụ, việc khác theo quy định của pháp luật."
+      
     ]
   },
   professionalAreas: {
-    title: "Lĩnh vực chuyên môn",
+    title: "Lĩnh vực hành nghề",
     icon: BriefcaseBusiness,
     areas: [
-      { icon: CheckCircle, title: "Hình thành & cấu trúc doanh nghiệp" },
-      { icon: Handshake, title: "Soạn thảo và đàm phán hợp đồng" },
-      { icon: Building, title: "Mua bán và sáp nhập" },
-      { icon: ShieldCheck, title: "Quản trị doanh nghiệp" },
-      { icon: FileText, title: "Pháp chế Doanh nghiệp" },
-      { icon: BookOpen, title: "Tuân thủ quy định" },
-      { icon: CheckCircle, title: "Luật sở hữu trí tuệ" },
-      { icon: Handshake, title: "Tuân thủ luật lao động" },
-      { icon: Building, title: "Soạn thảo hợp đồng" },
-      { icon: ShieldCheck, title: "Tư vấn đại hạn" }
+      { icon: Users, title: "Tố tụng dân sự" },
+      { icon: Scale, title: "Tố tụng hình sự" },
+      { icon: Landmark, title: "Tố tụng hành chính" },
+      { icon: FileText, title: "Tranh chấp hợp đồng" },
+      { icon: Lightbulb, title: "Tranh chấp về quyền sở hữu trí tuệ" },
+      { icon: SearchCheck, title: "Xem xét, nghiên cứu hồ sơ vụ án" },
+      { icon: BookOpen, title: "Tư vấn về các quy trình, thủ tục tố tụng" },
+      { icon: Shield, title: "Người bảo vệ quyền và lợi ích hợp pháp của đương sự" },
+      { icon: Handshake, title: "Người bào chữa cho quyền và lợi ích hợp pháp của đương sự " },
+      { icon: FilePen, title: "Soạn thảo hồ sơ liên quan đến tố tụng" }
     ]
   },
   sidebar: {
     contact: {
       icon: Phone,
-      title: "Bạn cần trợ giúp về Luật doanh nghiệp?",
+      title: "Bạn cần trợ giúp về tố tụng?",
       description: "Hãy liên hệ với chúng tôi ngay hôm nay để đặt lịch hẹn tư vấn về vấn đề pháp lý của bạn.",
       buttons: [
         {
-          href: "tel:0938571549",
+          href: "https://zalo.me/0938571549",
           text: "0938571549",
           icon: Phone,
           variant: "primary" as const
         },
         {
-          href: "/contact",
+          href: "mailto:vanphongluatsutunglam@gmail.com",
           text: "Email chúng tôi",
           icon: Mail,
           variant: "secondary" as const
@@ -175,24 +187,24 @@ export const corporateLawData = {
       ]
     },
     specialties: {
-      title: "Chuyên môn phụ",
+      title: "Lĩnh vực chuyên môn",
       icon: FileText,
       items: [
         {
-          title: "Thành lập doanh nghiệp",
-          description: "Chọn loại hình thành tạo và tăng trưởng cho doanh nghiệp mới"
+          title: "Đại diện tố tụng",
+          description: "Trong các vụ án hình sự, dân sự, lao động, thương mại và các tranh chấp về sở hữu trí tuệ."
         },
         {
-          title: "Mua bán và sáp nhập",
-          description: "Đại diện bên mua và bên bán trong các vụ sáp nhập và mua lại"
+          title: "Người bào chữa/bảo vệ quyền lợi ",
+          description: "Bảo vệ quyền lợi của người bị hại, nguyên đơn dân sự, bị đơn dân sự, người có quyền lợi, nghĩa vụ liên quan trong vụ án tố tụng."
         },
         {
-          title: "Quản trị doanh nghiệp",
-          description: "Tư vấn hội đồng quản trị, chương trình tuân thủ và quản lý rủi ro"
+          title: "Người đại diện bảo vệ quyền, lợi ích hợp pháp ",
+          description: "Đại diện bảo vệ quyền, lợi ích hợp pháp của nguyên đơn, bị đơn, người có quyền lợi, nghĩa vụ liên quan trong các vụ án tranh chấp/ tố tụng."
         },
         {
-          title: "Soạn thảo và đàm phán hợp đồng",
-          description: "Tư vấn hội đồng quản trị, chương trình tuân thủ và quản lý rủi ro"
+          title: "Tư vấn về các quy trình, thủ tục tố tụng",
+          description: "Tư vấn về trình tự, thủ tục giải quyết vụ án tố tụng theo quy định của Pháp luật. Giải đáp thắc mắc liên quan đến pháp lý trong các giai đoạn và thủ tục trong Tố tụng."
         }
       ]
     },
@@ -201,37 +213,37 @@ export const corporateLawData = {
       links: [
         {
           href: "/services/real-estate",
-          text: "Luật Đất đai"
+          text: "Đại diện ngoài tố tụng"
         },
         {
           href: "/services/labor",
-          text: "Luật Lao động"
+          text: "Tư vấn pháp luật"
         }
       ]
     }
   },
   services: {
-    title: "Dịch vụ luật Doanh nghiệp tại văn phòng chúng tôi",
+    title: "Dịch vụ luật tham gia tố tụng tại văn phòng chúng tôi",
     items: [
       {
         icon: BriefcaseBusiness,
-        title: "Thành lập doanh nghiệp",
-        description: "Chiến lược hình thành, tài trợ và tăng trưởng cho doanh nghiệp mới"
+        title: "Đại diện tố tụng",
+        description: "Trong các vụ án hình sự, dân sự, lao động, thương mại và các tranh chấp về sở hữu trí tuệ."
       },
       {
         icon: Handshake,
-        title: "Mua bán & sáp nhập",
-        description: "Đại diện bên mua và bên bán trong các vụ sáp nhập và mua lại"
+        title: "Người bào chữa/bảo vệ quyền lợi",
+        description: "Bảo vệ quyền lợi của người bị hại, nguyên đơn dân sự, bị đơn dân sự, người có quyền lợi, nghĩa vụ liên quan trong vụ án tố tụng."
       },
       {
         icon: ShieldCheck,
-        title: "Hợp đồng và thị trường",
-        description: "Chào bán công khai và riêng tư, tuân thủ hợp đồng và quản hệ nhà đầu tư"
+        title: "Người đại diện bảo vệ quyền, lợi ích hợp pháp",
+        description: "Đại diện bảo vệ quyền, lợi ích hợp pháp của nguyên đơn, bị đơn, người có quyền lợi, nghĩa vụ liên quan trong các vụ án tranh chấp/ tố tụng."
       },
       {
         icon: FileText,
-        title: "Pháp chế doanh nghiệp",
-        description: "Tư vấn hội đồng quản trị, chương trình tuân thủ và quản lý rủi ro"
+        title: "Tư vấn về các quy trình, thủ tục tố tụng",
+        description: "Tư vấn về trình tự, thủ tục giải quyết vụ án tố tụng theo quy định của Pháp luật. Giải đáp thắc mắc liên quan đến pháp lý trong các giai đoạn và thủ tục trong Tố tụng."
       }
     ]
   }
@@ -251,14 +263,14 @@ export const familyLawData = {
     description: "Dịch vụ pháp lý toàn diện về hôn nhân và gia đình, bao gồm ly hôn, phân chia tài sản, quyền nuôi con và các thỏa thuận trước hôn nhân. Văn phòng của chúng tôi cung cấp tư vấn pháp lý tế nhị và hỗ trợ trong những tình huống gia đình phức tạp nhất.",
     buttons: [
       {
-        href: "tel:0938571549",
+        href: "https://zalo.me/0938571549",
         text: "Đặt lịch hẹn",
         icon: Phone,
         variant: "primary" as const
       },
       {
         href: "/contact",
-        text: "Tham khảo trang dịch vụ hành nghề",
+        text: "Tham khảo trang hoạt động hành nghề",
         variant: "secondary" as const
       }
     ]
@@ -295,7 +307,7 @@ export const familyLawData = {
       description: "Hãy liên hệ với chúng tôi ngay hôm nay để đặt lịch hẹn tư vấn về vấn đề pháp lý gia đình của bạn.",
       buttons: [
         {
-          href: "tel:0938571549",
+          href: "https://zalo.me/0938571549",
           text: "0938571549",
           icon: Phone,
           variant: "primary" as const

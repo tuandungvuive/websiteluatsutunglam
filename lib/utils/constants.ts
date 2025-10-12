@@ -28,7 +28,11 @@ export const heroData = {
   },
   heading: {
     title: "Luật sư Đồng hành, Giải pháp Vững chắc",
-    description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ đại diện pháp lý toàn diện trên mọi lĩnh vực. Chúng tôi cam kết hành nghề với chính trực tuyệt đối, bảo vệ tối đa quyền lợi khách hàng và mang lại kết quả vượt trội trong mọi vụ việc"
+    description1: "Văn phòng luật sư Tùng Lâm thuộc Đoàn luật sư Thành phố Hồ Chí Minh được thành lập theo Giấy phép đăng ký hoạt động số 41.01.1844/TP-ĐKHĐ do Sở Tư pháp Thành phố Hồ Chí Minh cấp lần 1 ngày 24/12/2012.",
+    description2: "Hiện nay, từ ngày 24/9/2025 Văn phòng luật sư Tùng Lâm được Sở Tư pháp Thành phố Hồ Chí Minh cấp Giấy đăng ký hoạt động số 79.2012.01.1844/TP/ĐKHĐ.",
+    description3: "Văn phòng đã đảm nhận bào chữa và bảo vệ quyền lợi hợp pháp của khách hàng trong rất nhiều các vụ án hình sự và phi hình sự tại Tòa án trong cả nước. Ngoài ra, Văn phòng còn đại diện ngoài tố tụng, tư vấn pháp lý cho nhiều doanh nghiệp và cá nhân để bảo vệ quyền và lợi ích hợp pháp cho họ.",
+    description4: "Với luật sư giỏi chuyên môn, giàu kinh nghiệm, tận tâm và tuân thủ đạo đức nghề nghiệp luật sư; Văn phòng luật sư Tùng Lâm đã tạo được niềm tin và sự hài lòng cho Quý Khách hàng khi đến với Văn phòng.",
+    description5: "Với phương châm “Xuất sắc trong tố tụng, chính trực trong mọi hành động”, Văn phòng luật sư Tùng Lâm luôn sẵn sàng là người hộ vệ pháp lý đối với Quý Khách hàng."
   },
   buttons: [
     {
@@ -71,7 +75,7 @@ export const coreValuesData = {
   heading: {
     title: "Xuất sắc trong tố tụng,",
     subtitle: "Chính trực trong mọi hành động",
-    description: "Chúng tôi kết hợp kinh nghiệm pháp lý xây dựng trong 1 thập kỷ qua với các phương pháp tiếp cận sáng tạo để mang lại kết quả vượt mong đợi."
+    description: "Với phương châm “Xuất sắc trong tố tụng, chính trực trong mọi hành động”, Văn phòng luật sư Tùng Lâm kết hợp kinh nghiệm pháp lý vững chắc xây dựng trong suốt một thập kỷ qua với các giải pháp tiếp cận sáng tạo để mang lại những kết quả pháp lý vượt trội. Chúng tôi luôn sẵn sàng là người hộ vệ pháp lý đáng tin cậy của Quý Khách hàng."
   },
   cards: [
     {
@@ -294,6 +298,7 @@ export const contactData = {
       title: "Email liên hệ",
       details: [
         "ls.songtung@yahoo.com - Luật sư Lê Song Tùng",
+        "vanphongluatsutunglam@gmail.com - Văn phòng Luật sư Tùng Lâm",
         "Tuandungvuive@gmail.com- Cộng sự Lê Anh Tuấn Dũng"
       ]
     },
