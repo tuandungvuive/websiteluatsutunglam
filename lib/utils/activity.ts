@@ -9,7 +9,6 @@ import {
   BriefcaseBusiness,
   ArrowLeft,
   Handshake,
-  Building,
   ShieldCheck,
   BookOpen,
   Heart,
@@ -18,6 +17,11 @@ import {
   Lightbulb,
   SearchCheck,
   FilePen,
+  Home,
+  Building2,
+  MapPin,
+  FileCheck,
+  ClipboardList,
 } from 'lucide-react';
 import { servicesData } from './constants';
 
@@ -382,3 +386,274 @@ export const familyLawData = {
     ]
   }
 };
+
+// Civil Law Page Data
+export const civilLawData = {
+  backLink: {
+    href: "/activity",
+    text: "Quay lại trang hoạt động hành nghề",
+    icon: ArrowLeft
+  },
+  hero: {
+    icon: Scale,
+    title: "Luật Dân sự",
+    badge: "12+ năm kinh nghiệm hành nghề",
+    description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ pháp lý toàn diện trong lĩnh vực luật dân sự, bao gồm tranh chấp hợp đồng, bồi thường thiệt hại, quyền sở hữu và các vấn đề dân sự khác. Chúng tôi cam kết bảo vệ quyền và lợi ích hợp pháp của khách hàng với phương pháp tiếp cận chuyên nghiệp và hiệu quả.",
+    buttons: [
+      {
+        href: "https://zalo.me/0938571549",
+        text: "Đặt lịch hẹn",
+        icon: Phone,
+        variant: "primary" as const
+      },
+      {
+        href: "/activity",
+        text: "Tham khảo trang dịch vụ hành nghề",
+        variant: "secondary" as const
+      }
+    ]
+  },
+  mainContent: {
+    icon: Scale,
+    title: "Dịch vụ tư vấn Luật Dân sự",
+    description: [
+      "Luật Dân sự là ngành luật điều chỉnh các quan hệ nhân thân và quan hệ tài sản giữa các chủ thể bình đẳng trong xã hội. Đây là một trong những lĩnh vực pháp luật rộng lớn và quan trọng nhất, ảnh hưởng trực tiếp đến đời sống và quyền lợi của mọi công dân.",
+      "Văn phòng Luật sư Tùng Lâm chuyên cung cấp các dịch vụ pháp lý trong lĩnh vực luật dân sự, bao gồm tư vấn, soạn thảo hợp đồng, đại diện tố tụng và giải quyết tranh chấp. Với đội ngũ luật sư giàu kinh nghiệm, chúng tôi cam kết mang đến giải pháp pháp lý tối ưu cho mọi vấn đề dân sự của khách hàng.",
+      "Chúng tôi hiểu rằng mỗi vụ việc dân sự đều có những đặc thù riêng, vì vậy chúng tôi luôn tiếp cận một cách toàn diện, phân tích kỹ lưỡng từng tình huống để đưa ra lời khuyên pháp lý chính xác và hiệu quả nhất.",
+      "Các dịch vụ của chúng tôi bao gồm tư vấn về quyền và nghĩa vụ dân sự, soạn thảo và thẩm định hợp đồng, đại diện khách hàng trong các vụ tranh chấp dân sự, hỗ trợ thương lượng và hòa giải, cũng như đại diện tố tụng tại tòa án các cấp."
+    ]
+  },
+  professionalAreas: {
+    title: "Lĩnh vực hành nghề",
+    icon: FileText,
+    areas: [
+      { icon: FileText, title: "Tranh chấp hợp đồng dân sự" },
+      { icon: ShieldCheck, title: "Bồi thường thiệt hại" },
+      { icon: Users, title: "Quyền sở hữu và tài sản" },
+      { icon: BookOpen, title: "Tranh chấp thừa kế" },
+      { icon: Handshake, title: "Các giao dịch dân sự" },
+      { icon: FilePen, title: "Soạn thảo hợp đồng dân sự" },
+      { icon: Scale, title: "Đại diện tố tụng dân sự" },
+      { icon: SearchCheck, title: "Thẩm định hợp đồng" },
+      { icon: Lightbulb, title: "Tư vấn pháp luật dân sự" },
+      { icon: ClipboardList, title: "Hòa giải tranh chấp dân sự" }
+    ]
+  },
+  sidebar: {
+    contact: {
+      icon: Phone,
+      title: "Bạn cần trợ giúp về Luật Dân sự?",
+      description: "Hãy liên hệ với chúng tôi ngay hôm nay để đặt lịch hẹn tư vấn về vấn đề dân sự của bạn.",
+      buttons: [
+        {
+          href: "https://zalo.me/0938571549",
+          text: "0938571549",
+          icon: Phone,
+          variant: "primary" as const
+        },
+        {
+          href: "mailto:vanphongluatsutunglam@gmail.com",
+          text: "Email chúng tôi",
+          icon: Mail,
+          variant: "secondary" as const
+        }
+      ]
+    },
+    specialties: {
+      title: "Lĩnh vực chuyên môn",
+      icon: FileText,
+      items: [
+        {
+          title: "Tranh chấp hợp đồng",
+          description: "Tư vấn và giải quyết các tranh chấp phát sinh từ hợp đồng dân sự, thương mại."
+        },
+        {
+          title: "Bồi thường thiệt hại",
+          description: "Đại diện yêu cầu bồi thường hoặc bảo vệ quyền lợi trong các vụ việc bồi thường."
+        },
+        {
+          title: "Quyền sở hữu",
+          description: "Bảo vệ quyền sở hữu tài sản, giải quyết tranh chấp về quyền sở hữu."
+        },
+        {
+          title: "Thừa kế",
+          description: "Tư vấn và giải quyết các vấn đề liên quan đến thừa kế tài sản."
+        }
+      ]
+    },
+    relatedAreas: {
+      title: "Các lĩnh vực liên quan",
+      links: [
+        {
+          href: "/activity/family",
+          text: "Luật Hôn nhân & Gia đình"
+        },
+        {
+          href: "/activity/real-estate",
+          text: "Luật Đất đai"
+        }
+      ]
+    }
+  },
+  services: {
+    title: "Dịch vụ luật Dân sự tại văn phòng chúng tôi",
+    items: [
+      {
+        icon: FileText,
+        title: "Tư vấn pháp luật dân sự",
+        description: "Tư vấn về quyền và nghĩa vụ dân sự, các vấn đề pháp lý phát sinh trong đời sống."
+      },
+      {
+        icon: FilePen,
+        title: "Soạn thảo hợp đồng",
+        description: "Soạn thảo và thẩm định các loại hợp đồng dân sự đảm bảo quyền lợi khách hàng."
+      },
+      {
+        icon: Scale,
+        title: "Đại diện tố tụng",
+        description: "Đại diện khách hàng tại tòa án trong các vụ tranh chấp dân sự."
+      },
+      {
+        icon: Handshake,
+        title: "Hòa giải tranh chấp",
+        description: "Hỗ trợ thương lượng và hòa giải để giải quyết tranh chấp một cách hòa bình."
+      }
+    ]
+  }
+};
+
+// Real Estate Law Page Data
+export const realEstateLawData = {
+  backLink: {
+    href: "/activity",
+    text: "Quay lại trang hoạt động hành nghề",
+    icon: ArrowLeft
+  },
+  hero: {
+    icon: Home,
+    title: "Luật Đất đai & Bất động sản",
+    badge: "12+ năm kinh nghiệm hành nghề",
+    description: "Văn phòng Luật sư Tùng Lâm cung cấp dịch vụ pháp lý chuyên sâu về đất đai và bất động sản, bao gồm tư vấn giao dịch, tranh chấp đất đai, thủ tục pháp lý và các vấn đề liên quan. Với kinh nghiệm dày dạn, chúng tôi đồng hành cùng khách hàng trong mọi giao dịch bất động sản một cách an toàn và hiệu quả.",
+    buttons: [
+      {
+        href: "https://zalo.me/0938571549",
+        text: "Đặt lịch hẹn",
+        icon: Phone,
+        variant: "primary" as const
+      },
+      {
+        href: "/activity",
+        text: "Tham khảo trang dịch vụ hành nghề",
+        variant: "secondary" as const
+      }
+    ]
+  },
+  mainContent: {
+    icon: Home,
+    title: "Dịch vụ tư vấn Luật Đất đai & Bất động sản",
+    description: [
+      "Luật Đất đai và Bất động sản là lĩnh vực pháp luật điều chỉnh các quan hệ pháp luật về quyền sở hữu, quyền sử dụng đất đai và các giao dịch liên quan đến bất động sản. Đây là một trong những lĩnh vực phức tạp và quan trọng, đòi hỏi sự am hiểu sâu sắc về quy định pháp luật và thực tiễn thị trường.",
+      "Văn phòng Luật sư Tùng Lâm chuyên cung cấp các dịch vụ pháp lý toàn diện trong lĩnh vực đất đai và bất động sản. Chúng tôi hỗ trợ khách hàng trong các giao dịch mua bán, chuyển nhượng, cho thuê, thế chấp bất động sản, cũng như giải quyết các tranh chấp phát sinh.",
+      "Với đội ngũ luật sư có chuyên môn cao và kinh nghiệm thực tế phong phú, chúng tôi cam kết mang đến cho khách hàng những dịch vụ pháp lý chất lượng cao, đảm bảo tính pháp lý và an toàn cho mọi giao dịch bất động sản.",
+      "Các dịch vụ của chúng tôi bao gồm tư vấn về quyền sử dụng đất, thủ tục cấp giấy chứng nhận, tư vấn giao dịch bất động sản, soạn thảo hợp đồng, thẩm định pháp lý bất động sản, giải quyết tranh chấp đất đai và đại diện tố tụng tại tòa án."
+    ]
+  },
+  professionalAreas: {
+    title: "Lĩnh vực hành nghề",
+    icon: Building2,
+    areas: [
+      { icon: Home, title: "Mua bán bất động sản" },
+      { icon: FileCheck, title: "Thủ tục cấp sổ đỏ" },
+      { icon: MapPin, title: "Tranh chấp đất đai" },
+      { icon: FilePen, title: "Soạn thảo hợp đồng BĐS" },
+      { icon: Building2, title: "Chuyển nhượng quyền sử dụng đất" },
+      { icon: ShieldCheck, title: "Thế chấp bất động sản" },
+      { icon: SearchCheck, title: "Thẩm định pháp lý BĐS" },
+      { icon: FileText, title: "Cho thuê bất động sản" },
+      { icon: Scale, title: "Tư vấn quy hoạch & pháp lý" },
+      { icon: Lightbulb, title: "Tư vấn đầu tư BĐS" }
+    ]
+  },
+  sidebar: {
+    contact: {
+      icon: Phone,
+      title: "Bạn cần trợ giúp về Luật Đất đai?",
+      description: "Hãy liên hệ với chúng tôi ngay hôm nay để đặt lịch hẹn tư vấn về vấn đề bất động sản của bạn.",
+      buttons: [
+        {
+          href: "https://zalo.me/0938571549",
+          text: "0938571549",
+          icon: Phone,
+          variant: "primary" as const
+        },
+        {
+          href: "mailto:vanphongluatsutunglam@gmail.com",
+          text: "Email chúng tôi",
+          icon: Mail,
+          variant: "secondary" as const
+        }
+      ]
+    },
+    specialties: {
+      title: "Lĩnh vực chuyên môn",
+      icon: FileText,
+      items: [
+        {
+          title: "Giao dịch bất động sản",
+          description: "Tư vấn và hỗ trợ các giao dịch mua bán, chuyển nhượng bất động sản an toàn."
+        },
+        {
+          title: "Tranh chấp đất đai",
+          description: "Giải quyết các tranh chấp về quyền sử dụng đất, ranh giới đất đai."
+        },
+        {
+          title: "Thủ tục pháp lý",
+          description: "Hỗ trợ hoàn tất các thủ tục cấp giấy chứng nhận quyền sử dụng đất."
+        },
+        {
+          title: "Thẩm định pháp lý",
+          description: "Thẩm định pháp lý dự án, giao dịch bất động sản để đảm bảo an toàn."
+        }
+      ]
+    },
+    relatedAreas: {
+      title: "Các lĩnh vực liên quan",
+      links: [
+        {
+          href: "/activity/civil",
+          text: "Luật Dân sự"
+        },
+        {
+          href: "/activity/corporate",
+          text: "Tham gia tố tụng"
+        }
+      ]
+    }
+  },
+  services: {
+    title: "Dịch vụ luật Đất đai & Bất động sản tại văn phòng chúng tôi",
+    items: [
+      {
+        icon: Home,
+        title: "Tư vấn giao dịch BĐS",
+        description: "Tư vấn toàn diện cho các giao dịch mua bán, cho thuê, chuyển nhượng bất động sản."
+      },
+      {
+        icon: FilePen,
+        title: "Soạn thảo hợp đồng BĐS",
+        description: "Soạn thảo và thẩm định các loại hợp đồng liên quan đến bất động sản."
+      },
+      {
+        icon: FileCheck,
+        title: "Hỗ trợ thủ tục pháp lý",
+        description: "Hỗ trợ các thủ tục cấp sổ, sang tên, chuyển nhượng quyền sử dụng đất."
+      },
+      {
+        icon: Scale,
+        title: "Giải quyết tranh chấp",
+        description: "Đại diện khách hàng giải quyết tranh chấp đất đai tại tòa án và cơ quan nhà nước."
+      }
+    ]
+  }
+};
+
